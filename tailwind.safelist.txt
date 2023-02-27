@@ -1,0 +1,14 @@
+text-teal
+text-pink
+text-red
+text-gray
+
+border-teal
+border-pink
+border-red
+border-gray
+
+bg-teal
+bg-pink
+bg-red
+bg-gray

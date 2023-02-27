@@ -1,0 +1,19 @@
+models:
+  Post:
+    author_id: id foreign:users
+    title: string:200
+    introduction: string:300
+    content: nullable json
+    published_at: nullable timestamp
+
+  Production:
+    title: string:100
+    introduction: string:300
+    content: nullable json
+    published_at: nullable timestamp
+
+  Page:
+    title: string:200
+    content: nullable json
+
+seeders: Page, Production, Post

@@ -1,0 +1,45 @@
+@layer base {
+    @font-face {
+        font-family: "Neue Haas";
+        font-weight: 400;
+        font-style: normal;
+        src: url(../fonts/NeueHaasGrotDisp-55Roman-Web.woff) format("woff"),
+            url(../fonts/NeueHaasGrotDisp-55Roman-Web.woff2) format("woff2");
+    }
+
+    @font-face {
+        font-family: "Neue Haas";
+        font-weight: 600;
+        font-style: normal;
+        src: url(../fonts/NeueHaasGrotDisp-65Medium-Web.woff) format("woff"),
+            url(../fonts/NeueHaasGrotDisp-65Medium-Web.woff2) format("woff2");
+    }
+
+    @font-face {
+        font-family: "Neue Haas";
+        font-weight: 600;
+        font-style: italic;
+        src: url(../fonts/NeueHaasGrotDisp-66MediumItalic-Web.woff)
+                format("woff"),
+            url(../fonts/NeueHaasGrotDisp-66MediumItalic-Web.woff2)
+                format("woff2");
+    }
+
+    @font-face {
+        font-family: "Neue Haas";
+        font-weight: 700;
+        font-style: normal;
+        src: url(../fonts/NeueHaasGrotDisp-95Black-Web.woff) format("woff"),
+            url(../fonts/NeueHaasGrotDisp-95Black-Web.woff2) format("woff2");
+    }
+
+    @font-face {
+        font-family: "Neue Haas";
+        font-weight: 700;
+        font-style: italic;
+        src: url(../fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff)
+                format("woff"),
+            url(../fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff2)
+                format("woff2");
+    }
+}

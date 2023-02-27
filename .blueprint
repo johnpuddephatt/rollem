@@ -1,0 +1,21 @@
+created:
+    - database/factories/PostFactory.php
+    - database/factories/ProductionFactory.php
+    - database/factories/PageFactory.php
+    - database/migrations/2023_02_13_175005_create_posts_table.php
+    - database/migrations/2023_02_13_175006_create_productions_table.php
+    - database/migrations/2023_02_13_175007_create_pages_table.php
+    - app/Models/Post.php
+    - app/Models/Production.php
+    - app/Models/Page.php
+    - database/seeders/PageSeeder.php
+    - database/seeders/ProductionSeeder.php
+    - database/seeders/PostSeeder.php
+    - app/Nova/Post.php
+    - app/Nova/Production.php
+    - app/Nova/Page.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Post: { author_id: 'id foreign:users', title: 'string:200', introduction: 'string:300', content: 'nullable json', published_at: 'nullable timestamp' }
+    Production: { title: 'string:100', introduction: 'string:300', content: 'nullable json', published_at: 'nullable timestamp' }
+    Page: { title: 'string:200', content: 'nullable json' }

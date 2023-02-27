@@ -1,0 +1,45 @@
+@import "_fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-white;
+}
+
+.font-bold {
+    letter-spacing: -0.03em;
+}
+
+.font-semibold {
+    letter-spacing: -0.015em;
+}
+
+.italic {
+    letter-spacing: 0 !important;
+}
+
+.prose\:emphasise-first > *:first-child {
+    @apply text-lg font-semibold;
+}
+
+.last-child\:text-black > *:last-child {
+    @apply text-black;
+}
+
+.prose blockquote {
+    @apply xl:text-xl text-lg font-bold bottom-0 my-8 lg:my-16 border-l-0 before:border-t-4 before:border-t-teal before:w-48 before:max-w-[50%] before:block before:mb-2 pt-4 pl-0 pr-0;
+}
+
+.has-blockquotes-in-sidebar blockquote {
+    @apply xl:mb-0  xl:absolute xl:left-full max-w-lg  xl:w-full  xl:max-w-sm xl:ml-24;
+}
+
+.prose blockquote p {
+    @apply my-0;
+}
+
+.wrap-words {
+    word-spacing: 9999px;
+}
