@@ -47,7 +47,7 @@ class Reviews extends Layout
                     ->placeholder("Select a rating"),
                 Select::make("Publication")
                     ->options(
-                        count(nova_get_setting("publications"))
+                        nova_get_setting("publications")
                             ? \Illuminate\Support\Arr::pluck(
                                 nova_get_setting("publications"),
                                 "publication_name",
