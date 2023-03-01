@@ -1,8 +1,8 @@
 @php($embed = isset($layout->trailer) ? OEmbed::get($layout->trailer) : null)
 
-<div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative -z-10 flex h-screen flex-col items-center justify-end bg-black text-white">
+<div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative flex h-screen flex-col items-center justify-end text-white">
 
-    <x-image conversion="3x2" id="hero-image" class="fixed inset-0 h-full w-full object-cover" :image="$layout->image" />
+    <x-image conversion="3x2" id="hero-image" class="fixed inset-0 -z-10 h-full w-full object-cover" :image="$layout->image" />
 
     <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
     <div id="hero-text" class="relative z-10 mb-12 text-center opacity-90">
