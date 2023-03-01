@@ -1,4 +1,8 @@
- @php $publication_setting = nova_get_setting('publications')->firstWhere('publication_name', $publication);@endphp
+ @php
+     $publication_setting = Illuminate\Support\Arr::first($settings['publications'], function ($value, $key) use ($publication) {
+         return $value['publication_name'] == $publication;
+     });
+ @endphp
 
  @if ($publication ?? false)
      @php $logo = $publication_setting['publication_logo'] ?? null @endphp

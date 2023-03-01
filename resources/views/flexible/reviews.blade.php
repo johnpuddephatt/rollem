@@ -19,9 +19,11 @@
                     @if ($review->name)
                         <p class="mb-6 font-semibold">{{ $review->name }}</p>
                     @endif
-                    <blockquote class="mb-12">
-                        <p class="relative text-3xl font-semibold italic lg:text-4xl">“{{ $review->review }}”</p>
-                    </blockquote>
+                    @if ($review->review)
+                        <blockquote class="mb-12">
+                            <p class="relative text-3xl font-semibold italic lg:text-4xl">“{{ $review->review }}”</p>
+                        </blockquote>
+                    @endif
                     <div class="mb-12 flex flex-row items-center justify-center gap-2">
                         @if ($review->rating)
                             @foreach (range(0, $review->rating) as $rating)
