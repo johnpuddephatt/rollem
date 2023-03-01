@@ -1,0 +1,52 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-f37cd4be.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/fonts/NeueHaasGrotDisp-55Roman-Web.woff": {
+    "file": "assets/NeueHaasGrotDisp-55Roman-Web-d92facae.woff",
+    "src": "resources/fonts/NeueHaasGrotDisp-55Roman-Web.woff"
+  },
+  "resources/fonts/NeueHaasGrotDisp-55Roman-Web.woff2": {
+    "file": "assets/NeueHaasGrotDisp-55Roman-Web-8c5a10d5.woff2",
+    "src": "resources/fonts/NeueHaasGrotDisp-55Roman-Web.woff2"
+  },
+  "resources/fonts/NeueHaasGrotDisp-65Medium-Web.woff": {
+    "file": "assets/NeueHaasGrotDisp-65Medium-Web-936dd512.woff",
+    "src": "resources/fonts/NeueHaasGrotDisp-65Medium-Web.woff"
+  },
+  "resources/fonts/NeueHaasGrotDisp-65Medium-Web.woff2": {
+    "file": "assets/NeueHaasGrotDisp-65Medium-Web-49c4534a.woff2",
+    "src": "resources/fonts/NeueHaasGrotDisp-65Medium-Web.woff2"
+  },
+  "resources/fonts/NeueHaasGrotDisp-66MediumItalic-Web.woff": {
+    "file": "assets/NeueHaasGrotDisp-66MediumItalic-Web-b275da47.woff",
+    "src": "resources/fonts/NeueHaasGrotDisp-66MediumItalic-Web.woff"
+  },
+  "resources/fonts/NeueHaasGrotDisp-66MediumItalic-Web.woff2": {
+    "file": "assets/NeueHaasGrotDisp-66MediumItalic-Web-78b6f92c.woff2",
+    "src": "resources/fonts/NeueHaasGrotDisp-66MediumItalic-Web.woff2"
+  },
+  "resources/fonts/NeueHaasGrotDisp-95Black-Web.woff": {
+    "file": "assets/NeueHaasGrotDisp-95Black-Web-d8acf9a9.woff",
+    "src": "resources/fonts/NeueHaasGrotDisp-95Black-Web.woff"
+  },
+  "resources/fonts/NeueHaasGrotDisp-95Black-Web.woff2": {
+    "file": "assets/NeueHaasGrotDisp-95Black-Web-e2863138.woff2",
+    "src": "resources/fonts/NeueHaasGrotDisp-95Black-Web.woff2"
+  },
+  "resources/fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff": {
+    "file": "assets/NeueHaasGrotDisp-96BlackItalic-Web-1362e2ce.woff",
+    "src": "resources/fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff"
+  },
+  "resources/fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff2": {
+    "file": "assets/NeueHaasGrotDisp-96BlackItalic-Web-22e672a9.woff2",
+    "src": "resources/fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-9ed48a09.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
