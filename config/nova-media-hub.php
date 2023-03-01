@@ -111,6 +111,12 @@ return [
                 "height" => 1600,
                 "fit" => Manipulations::FIT_CROP,
             ],
+            "portrait" => [
+                "format" => "jpg",
+                "width" => 600,
+                "height" => 900,
+                "fit" => Manipulations::FIT_CROP,
+            ],
         ],
         "users" => [
             "2x3" => [

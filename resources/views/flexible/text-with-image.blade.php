@@ -12,8 +12,8 @@
                     <div class="mt-4">
                         {!! $layout->main !!}</div>
                 </div>
-                <x-image :image="$layout->image" conversion="3x2"
-                    class="{{ $layout->reverse ? '' : 'col-start-2' }} -my-64 block aspect-[2/3] w-1/2 max-w-none object-cover" />
+                <x-image :image="$layout->image" conversion="portrait"
+                    class="{{ $layout->reverse ? '' : 'col-start-2' }} -my-64 block w-1/2 max-w-none object-cover" />
             </div>
         </div>
 
