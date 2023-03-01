@@ -16,6 +16,7 @@ class MyFlexibleCast extends FlexibleCast
         "team" => \App\Nova\Flexible\Layouts\Team::class,
         "reviews" => \App\Nova\Flexible\Layouts\Reviews::class,
         "statement" => \App\Nova\Flexible\Layouts\Statement::class,
+        "text-with-image" => \App\Nova\Flexible\Layouts\TextWithImage::class,
         "text-with-links" => \App\Nova\Flexible\Layouts\TextWithLinks::class,
         "text-with-sidebar" =>
             \App\Nova\Flexible\Layouts\TextWithSidebar::class,

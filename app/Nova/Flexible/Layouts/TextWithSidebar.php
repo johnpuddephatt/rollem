@@ -5,7 +5,7 @@ namespace App\Nova\Flexible\Layouts;
 use Laravel\Nova\Fields\Heading;
 use Manogi\Tiptap\Tiptap;
 use Laravel\Nova\Fields\Text;
-
+use Trin4ik\NovaSwitcher\NovaSwitcher;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 
 class TextWithSidebar extends Layout
@@ -39,6 +39,7 @@ class TextWithSidebar extends Layout
     public function fields()
     {
         return [
+            NovaSwitcher::make("Reverse"),
             Heading::make("Main"),
             Tiptap::make("Main")->buttons([
                 "bold",

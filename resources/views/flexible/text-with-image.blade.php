@@ -1,21 +1,19 @@
-    <div class="relative pt-16 lg:pb-16">
-        <div class="grid-cols-2 lg:container lg:grid">
-            <x-image :image="$layout->image" conversion="3x2"
-                class="{{ $layout->reverse ? '' : 'col-start-2' }} block w-full max-w-none" />
+    <div class="relative py-36">
 
-            <div class="left-0 top-32 -z-10 min-h-[65%] w-full bg-gray py-8 lg:absolute lg:py-36">
-                <div class="container">
-                    <div class="{{ $layout->reverse ? 'ml-[50%] pl-24' : '' }} prose max-w-lg">
-                        @if ($layout->title)
-                            <h2 class="mt-0 mb-0 text-3xl font-bold">{{ $layout->title }}</h2>
-                        @endif
-                        @if ($layout->subtitle)
-                            <h3 class="mt-2 mb-0 text-xl font-bold">{{ $layout->subtitle }}</h3>
-                        @endif
-                        <div class="mt-4">
-                            {!! $layout->main !!}</div>
-                    </div>
+        <div class="left-0 top-32 -z-10 min-h-[65%] w-full bg-gray py-8 lg:py-36">
+            <div class="{{ $layout->reverse ? '' : 'justify-between' }} container flex flex-row gap-24">
+                <div class="{{ $layout->reverse ? 'order-last' : '' }} prose max-w-lg">
+                    @if ($layout->title)
+                        <h2 class="mt-0 mb-0 text-3xl font-bold">{{ $layout->title }}</h2>
+                    @endif
+                    @if ($layout->subtitle)
+                        <h3 class="mt-2 mb-0 text-xl font-bold">{{ $layout->subtitle }}</h3>
+                    @endif
+                    <div class="mt-4">
+                        {!! $layout->main !!}</div>
                 </div>
+                <x-image :image="$layout->image" conversion="3x2"
+                    class="{{ $layout->reverse ? '' : 'col-start-2' }} -my-64 block aspect-[2/3] w-1/2 max-w-none object-cover" />
             </div>
         </div>
 
