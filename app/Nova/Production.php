@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image as InterventionImage;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Nova\Actions\SaveAndResizeImage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class Production extends Resource
 {
@@ -64,12 +65,7 @@ class Production extends Resource
                 ->maxlength(250)
                 ->enforceMaxlength(),
 
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
+            MediaHubField::make("Image"),
 
             Panel::make("Content", [
                 Flexible::make("Content")

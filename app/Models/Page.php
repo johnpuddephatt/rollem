@@ -4,16 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
-use Whitecube\NovaFlexibleContent\Value\FlexibleCast;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use App\Casts\MyFlexibleCast;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Page extends Model implements HasMedia
+class Page extends Model
 {
-    use InteractsWithMedia;
     use HasFactory;
 
     /**
@@ -21,7 +15,13 @@ class Page extends Model implements HasMedia
      *
      * @var array
      */
-    protected $fillable = ["title", "content", "parent_id", "template"];
+    protected $fillable = [
+        "title",
+        "content",
+        "image",
+        "parent_id",
+        "template",
+    ];
 
     /**
      * The attributes that should be cast to native types.
@@ -31,18 +31,8 @@ class Page extends Model implements HasMedia
     protected $casts = [
         "id" => "integer",
         "content" => MyFlexibleCast::class,
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
     ];
-
-    public static $imageSizes = [
-        "image" => [1680, 1050],
-    ];
-
-    public function registerMediaConversions(Media $media = null): void
-    {
-        $this->addMediaConversion("thumb")
-            ->performOnCollections("hero-image")
-            ->crop("crop-center", 1024, 768);
-    }
 
     public function getURLAttribute()
     {

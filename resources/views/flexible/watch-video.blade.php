@@ -1,8 +1,9 @@
-<div class="{{ $layout->colour == 'red' ? 'bg-black pt-12 lg:pt-24' : null }} pb-4 lg:pb-24">
+<div class="{{ $layout->colour == 'red' ? 'bg-black pt-12 lg:pt-24' : 'bg-white' }} pb-4 lg:pb-24">
     <div class="container">
         <{{ $layout->link ? 'a' : 'div' }} {{ $layout->link ? 'target=_blank href=' . $layout->link : null }}
             class="bg-{{ $layout->colour }} {{ $layout->colour == 'red' ? null : 'lg:pr-64' }} relative block">
-            <img class="block w-full" src="/{{ $layout->image }}" />
+            <x-image :image="$layout->image" conversion="3x2" class="block w-full" />
+
             <div
                 class="to-transparent {{ $layout->colour == 'red' ? 'right-0' : 'right-64' }} absolute bottom-0 left-0 flex w-full flex-row items-end gap-4 bg-gradient-to-t from-[#000000aa] px-4 pt-24 pb-4 lg:gap-8 lg:px-12 lg:pb-8">
                 @svg('play', 'h-16 w-16 lg:h-24 lg:w-24')
@@ -27,5 +28,4 @@
             @endif
             </{{ $layout->link ? 'a' : 'div' }}>
     </div>
-
 </div>

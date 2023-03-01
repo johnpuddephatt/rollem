@@ -3,7 +3,6 @@
 namespace App\Nova\Flexible\Layouts;
 
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
-use Laravel\Nova\Fields\Text;
 use Manogi\Tiptap\Tiptap;
 use Laravel\Nova\Fields\Heading;
 use Outl1ne\NovaSimpleRepeatable\SimpleRepeatable;

@@ -1,9 +1,8 @@
     <div class="relative pt-16 lg:pb-16">
         <div class="grid-cols-2 lg:container lg:grid">
-            @if ($layout->image)
-                <img class="{{ $layout->reverse ? '' : 'col-start-2' }} block w-full max-w-none"
-                    src="{{ Storage::disk('public')->url($layout->image) }}" alt="">
-            @endif
+            <x-image :image="$layout->image" conversion="3x2"
+                class="{{ $layout->reverse ? '' : 'col-start-2' }} block w-full max-w-none" />
+
             <div class="left-0 top-32 -z-10 min-h-[65%] w-full bg-gray py-8 lg:absolute lg:py-36">
                 <div class="container">
                     <div class="{{ $layout->reverse ? 'ml-[50%] pl-24' : '' }} prose max-w-lg">

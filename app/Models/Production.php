@@ -33,10 +33,7 @@ class Production extends Model
         "id" => "integer",
         "published_at" => "timestamp",
         "content" => MyFlexibleCast::class,
-    ];
-
-    public static $imageSizes = [
-        "image" => [1680, 1050],
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
     ];
 
     public function getUrlAttribute()

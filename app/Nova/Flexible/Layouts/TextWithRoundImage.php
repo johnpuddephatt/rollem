@@ -3,10 +3,8 @@
 namespace App\Nova\Flexible\Layouts;
 
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
 use Manogi\Tiptap\Tiptap;
-use App\Nova\Actions\SaveAndResizeImage;
-use Illuminate\Support\Facades\Storage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 use Trin4ik\NovaSwitcher\NovaSwitcher;
 
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
@@ -34,8 +32,8 @@ class TextWithRoundImage extends Layout
      */
     protected $preview = true;
 
-    public static $imageSizes = [
-        "image" => [640, 640],
+    protected $casts = [
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
     ];
 
     /**
@@ -60,12 +58,7 @@ class TextWithRoundImage extends Layout
                     ],
                 ]),
 
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
+            MediaHubField::make("Image"),
         ];
     }
 }

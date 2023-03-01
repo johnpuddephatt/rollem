@@ -1,7 +1,7 @@
-<{{ $layout->link ? 'a' : 'div' }} class="relative md:grid md:grid-cols-2"
+<{{ $layout->link ? 'a' : 'div' }} class="relative bg-white md:grid md:grid-cols-2"
     {{ $layout->link ? 'href="' . $layout->link . '"' : null }}>
     @if ($layout->image)
-        <img class="mt-16 w-full" src="{{ Storage::disk('public')->url($layout->image) }}" alt="">
+        <x-image conversion="3x2" class="mt-16 w-full" :image="$layout->image" />
         <div class="bg-{{ $layout->colour ?? 'teal' }} absolute top-0 right-1/2 hidden h-16 w-16 md:block"></div>
     @endif
     <div

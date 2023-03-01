@@ -2,11 +2,8 @@
 
 namespace App\Nova\Flexible\Layouts;
 
-use Laravel\Nova\Fields\Image as NovaImage;
 use Laravel\Nova\Fields\Select;
-use App\Nova\Actions\SaveAndResizeImage;
-use Illuminate\Support\Facades\Storage;
-
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 
 class ImagePair extends Layout
@@ -32,9 +29,9 @@ class ImagePair extends Layout
      */
     protected $preview = true;
 
-    public static $imageSizes = [
-        "image" => [1200, 800],
-        "secondary_image" => [400, 600],
+    protected $casts = [
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
+        "secondary_image" => \App\Casts\NovaMediaLibraryCast::class,
     ];
 
     /**
@@ -45,18 +42,8 @@ class ImagePair extends Layout
     public function fields()
     {
         return [
-            NovaImage::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
-            NovaImage::make("Image 2", "secondary_image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
+            MediaHubField::make("Image"),
+            MediaHubField::make("Image 2", "secondary_image"),
             Select::make("Background colour")->options([
                 "" => "None",
                 "teal" => "Teal",

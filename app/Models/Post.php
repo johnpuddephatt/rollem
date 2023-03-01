@@ -10,10 +10,6 @@ class Post extends Model
 {
     use HasFactory;
 
-    public static $imageSizes = [
-        "image" => [1680, 1050],
-    ];
-
     /**
      * The attributes that are mass assignable.
      *
@@ -23,6 +19,7 @@ class Post extends Model
         "author_id",
         "title",
         "slug",
+        "image",
         "introduction",
         "content",
         "published_at",
@@ -37,6 +34,7 @@ class Post extends Model
         "id" => "integer",
         "author_id" => "integer",
         "published_at" => "timestamp",
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
         "content" => MyFlexibleCast::class,
     ];
 

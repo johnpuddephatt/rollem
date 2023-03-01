@@ -12,9 +12,6 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    public static $imageSizes = [
-        "photo" => [480, 640],
-    ];
     /**
      * The attributes that are mass assignable.
      *
@@ -48,5 +45,6 @@ class User extends Authenticatable
         "email_verified_at" => "datetime",
         "enable_login" => "boolean",
         "show_in_staff_directory" => "boolean",
+        "photo" => \App\Casts\NovaMediaLibraryCast::class,
     ];
 }

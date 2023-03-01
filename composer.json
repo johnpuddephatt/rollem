@@ -20,6 +20,7 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "manogi/nova-tiptap": "^3.2",
+        "outl1ne/nova-media-hub": "dev-main",
         "outl1ne/nova-menu-builder": "^7.1",
         "outl1ne/nova-settings": "^5.0",
         "outl1ne/nova-simple-repeatable": "^2.1",
@@ -87,6 +88,10 @@
         "flexible": {
             "type": "vcs",
             "url": "git@github.com:johnpuddephatt/nova-flexible-content.git"
+        },
+        "media-hub": {
+            "type": "vcs",
+            "url": "git@github.com:johnpuddephatt/nova-media-hub.git"
         },
         "nova-blueprint": {
             "type": "vcs",

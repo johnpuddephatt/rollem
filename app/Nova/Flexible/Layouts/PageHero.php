@@ -2,12 +2,9 @@
 
 namespace App\Nova\Flexible\Layouts;
 
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Textarea;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
-use Illuminate\Support\Facades\Storage;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
-use App\Nova\Actions\SaveAndResizeImage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class PageHero extends Layout
 {
@@ -25,10 +22,6 @@ class PageHero extends Layout
      */
     protected $title = "Page hero";
 
-    public static $imageSizes = [
-        "image" => [1680, 1050],
-    ];
-
     /**
      * Enable preview for this layout
      *
@@ -36,13 +29,9 @@ class PageHero extends Layout
      */
     protected $preview = true;
 
-    public function getResponsiveImageAttribute($value)
-    {
-        return Media::firstWhere("file_name", $this->image)?->img("", [
-            "id" => "hero-image",
-            "class" => "fixed inset-0 h-full w-full object-cover",
-        ]);
-    }
+    protected $casts = [
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
+    ];
 
     /**
      * Get the fields displayed by the layout.
@@ -51,20 +40,6 @@ class PageHero extends Layout
      */
     public function fields()
     {
-        return [
-            Textarea::make("Title")->rows(2),
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
-
-            // // $request
-            // //     ->findModel($request->resourceId)
-            // //     ->addMediaFromDisk($filename, "public")
-            // //     ->withResponsiveImages()
-            // //     ->toMediaCollection("hero-image");
-        ];
+        return [Textarea::make("Title")->rows(2), MediaHubField::make("Image")];
     }
 }

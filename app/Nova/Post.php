@@ -12,6 +12,7 @@ use Whitecube\NovaFlexibleContent\Flexible;
 use Laravel\Nova\Fields\Image;
 use App\Nova\Actions\SaveAndResizeImage;
 use Illuminate\Support\Facades\Storage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class Post extends Resource
 {
@@ -49,13 +50,7 @@ class Post extends Resource
                 ->sortable()
                 ->hideFromIndex(),
 
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
-
+            MediaHubField::make("Image"),
             Text::make("Title")
                 ->rules("required", "string", "max:50")
                 ->maxlength(50)
@@ -72,7 +67,6 @@ class Post extends Resource
             Panel::make("Content", [
                 Flexible::make("Flexible content", "content")
                     ->addLayout(\App\Nova\Flexible\Layouts\Text::class)
-
                     ->addLayout(
                         \App\Nova\Flexible\Layouts\TextWithSidebar::class
                     )

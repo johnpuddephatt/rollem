@@ -2,15 +2,12 @@
 
 namespace App\Nova\Flexible\Layouts;
 
-use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Textarea;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
-use Illuminate\Support\Facades\Storage;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\URL;
 use Laravel\Nova\Fields\Select;
-use App\Nova\Actions\SaveAndResizeImage;
-use Intervention\Image\Facades\Image as InterventionImage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class WatchVideo extends Layout
 {
@@ -35,25 +32,9 @@ class WatchVideo extends Layout
      */
     protected $preview = true;
 
-    public static $imageSizes = [
-        "image" => [1200, 720],
+    protected $casts = [
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
     ];
-
-    public function imagePreviews()
-    {
-        return [
-            "image" => function ($file) {
-                $filename = "temp_uploads" . "/" . $file->hashName() . ".jpg";
-                Storage::disk("public")->put(
-                    $filename,
-                    InterventionImage::make($file)
-                        ->fit(729, 468)
-                        ->encode("jpg", 75)
-                );
-                return $filename;
-            },
-        ];
-    }
 
     /**
      * Get the fields displayed by the layout.
@@ -63,12 +44,7 @@ class WatchVideo extends Layout
     public function fields()
     {
         return [
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
+            MediaHubField::make("Image", "image"),
             Text::make("Pretitle")->default("Pre-title (optional)"),
             Text::make("Title")->default("Video title"),
             Text::make("Subtitle")->default("e.g. year"),

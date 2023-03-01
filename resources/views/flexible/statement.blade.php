@@ -1,7 +1,7 @@
 @if ($layout->statement)
     <div class="relative flex flex-col justify-center overflow-hidden bg-gray py-36 lg:py-36" x-data="{ current: 1 }"
         x-init="setInterval(() => {++current }, 1500)">
-        <div class="relative z-10 max-w-4xl px-4 text-7xl font-bold xl:px-12 xl:text-8xl">
+        <div class="container relative z-10 ml-0 text-7xl font-bold xl:text-8xl">
 
             @foreach (explode(PHP_EOL, $layout->statement) as $line)
                 <p class="transition-all duration-700"

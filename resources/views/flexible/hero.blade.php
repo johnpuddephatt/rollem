@@ -1,12 +1,9 @@
 @php($embed = isset($layout->trailer) ? OEmbed::get($layout->trailer) : null)
 
 <div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative -z-10 flex h-screen flex-col items-center justify-end bg-black text-white">
-    @if ($layout->responsiveImage)
-        {!! $layout->responsiveImage !!}
-    @elseif($layout->image)
-        <img id="hero-image" class="fixed inset-0 h-full w-full object-cover"
-            src="{{ Storage::disk('public')->url($layout->image) }}" alt="">
-    @endif
+
+    <x-image conversion="3x2" id="hero-image" class="fixed inset-0 h-full w-full object-cover" :image="$layout->image" />
+
     <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
     <div id="hero-text" class="relative z-10 mb-12 text-center opacity-90">
         <h1 class="mb-8 text-7xl font-bold">{!! nl2br($layout->title) !!}</h1>

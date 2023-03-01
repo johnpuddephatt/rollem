@@ -17,6 +17,7 @@ use Laravel\Nova\Panel;
 use Manogi\Tiptap\Tiptap;
 use App\Nova\Actions\SaveAndResizeImage;
 use Illuminate\Support\Facades\Storage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class User extends Resource
 {
@@ -76,14 +77,7 @@ class User extends Resource
 
             Panel::make("Profile", [
                 Text::make("Role"),
-                Image::make("Photo")
-                    ->disk("public")
-                    ->preview(function ($value, $disk) {
-                        return $value
-                            ? Storage::disk($disk)->url($value)
-                            : null;
-                    })
-                    ->store(new SaveAndResizeImage()),
+                MediaHubField::make("Photo")->defaultCollection("users"),
                 Tiptap::make("Biography"),
             ]),
         ];

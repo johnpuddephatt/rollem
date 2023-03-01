@@ -2,14 +2,12 @@
 
 namespace App\Nova\Flexible\Layouts;
 
-use Laravel\Nova\Fields\Image;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
-use Illuminate\Support\Facades\Storage;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\URL;
 use Manogi\Tiptap\Tiptap;
-use App\Nova\Actions\SaveAndResizeImage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class FeatureBanner extends Layout
 {
@@ -34,8 +32,8 @@ class FeatureBanner extends Layout
      */
     protected $preview = true;
 
-    public static $imageSizes = [
-        "image" => [1680, 1050],
+    protected $casts = [
+        "image" => \App\Casts\NovaMediaLibraryCast::class,
     ];
 
     /**
@@ -46,13 +44,7 @@ class FeatureBanner extends Layout
     public function fields()
     {
         return [
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
-
+            MediaHubField::make("Image"),
             Text::make("Pre-title", "pretitle"),
             Text::make("Title"),
             Tiptap::make("Description")->buttons(["italic", "bold", "link"]),

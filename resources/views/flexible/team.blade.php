@@ -3,8 +3,7 @@
 
         @foreach ($layout->team as $member)
             <div class="text-center">
-                <img class="aspect-[3/4] bg-gray" src="{{ Storage::disk('public')->url($member->photo) }}" />
-
+                <x-image :image="$member->photo" conversion="2x3" class="block w-full bg-gray" />
                 <h3 class="mt-12 mb-4 text-4xl font-bold">{{ $member->name }}</h3>
                 <p class="text-2xl font-bold">{{ $member->role }}</p>
             </div>

@@ -15,6 +15,7 @@ use Laravel\Nova\Fields\Text;
 use Illuminate\Support\Facades\Storage;
 use Laravel\Nova\Fields\Image;
 use App\Nova\Actions\SaveAndResizeImage;
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class Page extends Resource
 {
@@ -81,12 +82,7 @@ class Page extends Resource
 
             Slug::make("Slug")->from("Title"),
 
-            Image::make("Image")
-                ->disk("public")
-                ->preview(function ($value, $disk) {
-                    return $value ? Storage::disk($disk)->url($value) : null;
-                })
-                ->store(new SaveAndResizeImage()),
+            MediaHubField::make("Image", "image"),
 
             Select::make("Template")
                 ->options(
