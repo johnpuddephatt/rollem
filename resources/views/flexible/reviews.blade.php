@@ -28,7 +28,7 @@
                                 @svg('star', 'w-6 h-6 lg:w-10 lg:h-10')
                             @endforeach
                         @endif
-                        @if (isset($review->publication))
+                        @if ($review->publication)
                             <cite class="ml-6 text-xl font-bold not-italic">
                                 <x-publication-logo class="h-8 w-full" :publication="$review->publication" />
                             </cite>
