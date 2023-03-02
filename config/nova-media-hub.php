@@ -82,7 +82,7 @@ return [
             "thumbnail" => [
                 // Image format, null for same as original
                 // Other options: jpg, pjpg, png, gif, webp, avif, tiff
-                "format" => null,
+                "format" => "jpg",
                 "width" => 250,
                 "height" => 250,
                 "fit" => Manipulations::FIT_CROP,
