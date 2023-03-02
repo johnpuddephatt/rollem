@@ -52,7 +52,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                             ->help(
                                 "Provide SVG code. Must be white on transparent background."
                             ),
-                    ])->addRowLabel("Add new publication"),
+                    ])
+                        ->addRowLabel("Add new publication")
+                        ->stacked(),
                 ]),
             ],
             [

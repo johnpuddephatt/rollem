@@ -2,9 +2,11 @@
 
 <div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative flex h-screen flex-col items-center justify-end text-white">
 
-    <x-image conversion="3x2" id="hero-image" class="fixed inset-0 -z-10 h-full w-full object-cover" :image="$layout->image" />
-
+    <div class="fixed inset-0 -z-10 bg-black">
+        <x-image conversion="3x2" id="hero-image" class="absolute inset-0 h-full w-full object-cover" :image="$layout->image" />
+    </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
+
     <div id="hero-text" class="relative z-10 mb-12 text-center opacity-90">
         <h1 class="mb-8 text-7xl font-bold">{!! nl2br($layout->title) !!}</h1>
         <p class="mx-auto mb-16 max-w-2xl text-xl font-semibold">{!! nl2br($layout->subtitle) !!}</p>

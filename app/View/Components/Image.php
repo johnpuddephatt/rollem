@@ -12,12 +12,8 @@ class Image extends Component
      *
      * @return void
      */
-    public function __construct(
-        public $image = null,
-        public string $conversion,
-        public string $class,
-        public string $id = ""
-    ) {
+    public function __construct(public $image = null, public string $conversion)
+    {
     }
 
     /**
