@@ -47,4 +47,9 @@ class User extends Authenticatable
         "show_in_staff_directory" => "boolean",
         "photo" => \App\Casts\NovaMediaLibraryCast::class,
     ];
+
+    public function getUrlAttribute()
+    {
+        return route("user.show", ["user" => $this->slug]);
+    }
 }
