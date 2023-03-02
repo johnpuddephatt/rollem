@@ -32,9 +32,20 @@ class Image extends Component
     {
         return Storage::disk($this->image->disk)->url(
             config("nova-media-hub.path_prefix") .
-                "/{$this->image->id}/conversions/{$this->image->conversions[$conversion ??
-                        $this->conversion]}"
+                $this->getImageConversionPath(
+                    $this->image,
+                    $conversion ?? $this->conversion
+                )
         );
+    }
+
+    public function getImageConversionPath($image, $conversion)
+    {
+        if (isset($image->conversions[$conversion])) {
+            return "/{$image->id}/conversions/{$image->conversions[$conversion]}";
+        } else {
+            return "/{$image->id}/{$image->file_name}";
+        }
     }
 
     public function getSrcSet()
