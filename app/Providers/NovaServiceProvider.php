@@ -250,6 +250,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
             \Outl1ne\MenuBuilder\MenuBuilder::make()->icon("menu"),
             new \Outl1ne\NovaSettings\NovaSettings(),
             \Outl1ne\NovaMediaHub\MediaHub::make(),
+            \Laravel\Nova\LogViewer\LogViewer::make(),
         ];
     }
 
