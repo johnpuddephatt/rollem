@@ -158,7 +158,7 @@ return [
     // NB! Must have a matching image_optimizer configured and binary for it to work
     "optimizable_mime_types" => [
         "image/jpeg",
-        // 'image/png',
+        "image/png",
         // 'image/gif',
     ],
 
