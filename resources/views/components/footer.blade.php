@@ -1,5 +1,5 @@
-<div class="bg-black relative overflow-hidden py-36">
-    <div class="text-white px-4 lg:px-16">
+<div class="relative overflow-hidden bg-black py-36">
+    <div class="container text-white">
         <p class="max-w-lg text-sm text-gray">{{ $settings['mission'] }}</p>
 
         <div class="mt-12 flex flex-row items-center gap-2">
