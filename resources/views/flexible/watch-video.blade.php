@@ -2,7 +2,7 @@
     <div class="container max-w-5xl">
         <{{ $layout->link ? 'a' : 'div' }} {{ $layout->link ? 'target=_blank href=' . $layout->link : null }}
             class="bg-{{ $layout->colour }} {{ $layout->colour == 'red' ? null : 'lg:pr-64' }} relative block">
-            <x-image :image="$layout->image" conversion="3x2" class="block aspect-video w-full" />
+            <x-image :image="$layout->image" conversion="3x2" class="block w-full" />
 
             <div
                 class="to-transparent {{ $layout->colour == 'red' ? 'right-0' : 'right-64' }} absolute bottom-0 left-0 flex w-full flex-row items-end gap-4 bg-gradient-to-t from-[#000000aa] px-4 pt-24 pb-4 lg:gap-8 lg:px-12 lg:pb-8">
