@@ -1,5 +1,5 @@
 <div class="{{ $layout->colour == 'red' ? 'bg-black pt-12 lg:pt-24' : 'bg-white' }} pb-4 lg:pb-24">
-    <div class="container">
+    <div class="container max-w-5xl">
         <{{ $layout->link ? 'a' : 'div' }} {{ $layout->link ? 'target=_blank href=' . $layout->link : null }}
             class="bg-{{ $layout->colour }} {{ $layout->colour == 'red' ? null : 'lg:pr-64' }} relative block">
             <x-image :image="$layout->image" conversion="3x2" class="block aspect-video w-full" />

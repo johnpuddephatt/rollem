@@ -1,4 +1,5 @@
-<blockquote class="bg-{{ $layout->background_colour ?? 'teal' }} flex flex-col justify-center py-32 lg:py-48">
+<blockquote
+    class="bg-{{ $layout->background_colour ?? 'teal' }} flex flex-col justify-center py-32 text-center lg:py-48 lg:text-left">
     <div class="container">
 
         <p class="text-{{ $layout->quote_colour ?? 'white' }} max-w-7xl text-5xl font-bold italic lg:text-8xl"

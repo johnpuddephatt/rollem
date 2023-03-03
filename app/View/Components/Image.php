@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\Blade;
 
 class Image extends Component
 {
@@ -64,18 +65,40 @@ class Image extends Component
                 []);
 
         $output = [];
+
         foreach ($conversions as $conversion => $path) {
             $output[$configs[$conversion]["width"]] = $this->getSrc(
                 $conversion
             );
         }
 
-        ksort($output);
+        krsort($output);
+
         $str = "";
+
         foreach ($output as $width => $url) {
             $str .= "{$url} {$width}w,";
         }
-        rtrim($str, ",");
+
+        $str .=
+            "data:image/svg+xml;base64," .
+            base64_encode(
+                Blade::render(
+                    '
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0"
+                        y="0" viewBox="0 0 {{ $width }} {{ $height }}">
+                    </svg>
+                ',
+                    [
+                        "width" => $configs[$this->conversion]["width"],
+                        "height" => $configs[$this->conversion]["height"],
+                    ]
+                )
+            ) .
+            " 32w";
+
+        // $str = rtrim($str, ",");
 
         return $str;
     }
