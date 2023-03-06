@@ -26,12 +26,12 @@
 
             <div class="relative overflow-hidden">
                 <div class="grid-cols-3 lg:container lg:grid">
-                    <div class="col-span-2 py-16 max-lg:container">
-                        <h2 class="container mt-16 mb-24 text-6xl font-bold">{{ $subProduction->title }}</h2>
+                    <div class="col-span-2 pt-16 max-lg:container">
+                        <h2 class="mt-16 text-6xl font-bold">{{ $subProduction->title }}</h2>
 
                     </div>
                     <div
-                        class="relative py-16 before:absolute before:left-0 before:top-0 before:bottom-0 before:-z-10 before:block before:w-[99999px] before:bg-gray lg:px-8">
+                        class="relative pt-16 before:absolute before:left-0 before:top-0 before:bottom-0 before:-z-10 before:block before:w-[99999px] before:bg-gray lg:px-8">
                     </div>
                 </div>
             </div>
