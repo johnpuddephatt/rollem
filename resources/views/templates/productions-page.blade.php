@@ -1,4 +1,6 @@
+@section('title', $page->title)
 @extends('layouts.default') @section('content')
+
     @include('flexible.page-hero', ['layout' => $page, 'text_color' => 'text-lilac'])
 
     <div class="bg-white">

@@ -1,3 +1,4 @@
+@section('title', $page->title)
 @extends('layouts.default') @section('content')
     @include('components.posts-hero')
 

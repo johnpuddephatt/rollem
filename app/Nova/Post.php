@@ -63,7 +63,7 @@ class Post extends Resource
                 ->maxlength(150)
                 ->enforceMaxlength(),
 
-            BelongsTo::make("Author", "author", User::class),
+            BelongsTo::make("Author", "author", User::class)->nullable(),
             Panel::make("Content", [
                 Flexible::make("Flexible content", "content")
                     ->addLayout(\App\Nova\Flexible\Layouts\Text::class)

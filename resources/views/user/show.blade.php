@@ -1,3 +1,4 @@
+@section('title', $user->name)
 @extends('layouts.default') @section('content')
     @include('components.user-hero')
 
