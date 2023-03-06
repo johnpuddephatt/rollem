@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-08d3a626.css",
+    "file": "assets/app-e00ff941.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -45,7 +45,7 @@
     "src": "resources/fonts/NeueHaasGrotDisp-96BlackItalic-Web.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-9ed48a09.js",
+    "file": "assets/app-97758dad.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
