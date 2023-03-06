@@ -24,7 +24,7 @@ class Image extends Component
      */
     public function render()
     {
-        if ($this->image) {
+        if (is_object($this->image)) {
             return view("components.image");
         }
     }
