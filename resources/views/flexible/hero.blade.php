@@ -4,6 +4,10 @@
 
     <div class="fixed inset-0 -z-10 bg-black">
         <x-image conversion="3x2" id="hero-image" class="absolute inset-0 h-full w-full object-cover" :image="$layout->image" />
+        @if ($layout->video)
+            <video autoplay loop muted class="absolute inset-0 h-full w-full object-cover"
+                src="{{ $layout->video->url }}" />
+        @endif
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
 

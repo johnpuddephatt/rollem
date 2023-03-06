@@ -33,6 +33,7 @@ class Hero extends Layout
 
     protected $casts = [
         "image" => \App\Casts\NovaMediaLibraryCast::class,
+        "video" => \App\Casts\NovaMediaLibraryCast::class,
     ];
     /**
      * Get the fields displayed by the layout.
@@ -45,6 +46,7 @@ class Hero extends Layout
             Textarea::make("Title")->rows(2),
             Textarea::make("Subtitle")->alwaysShow(),
             MediaHubField::make("Image"),
+            MediaHubField::make("Video"),
             URL::make("Trailer URL", "trailer"),
         ];
     }
