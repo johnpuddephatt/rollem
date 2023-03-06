@@ -73,6 +73,7 @@ class Production extends Resource
 
             Panel::make("Content", [
                 Flexible::make("Content")
+                    ->addLayout(\App\Nova\Flexible\Layouts\StatementText::class)
                     ->addLayout(
                         \App\Nova\Flexible\Layouts\ProductionHero::class
                     )
