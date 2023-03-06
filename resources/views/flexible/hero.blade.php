@@ -3,10 +3,15 @@
 <div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative flex h-screen flex-col items-center justify-end text-white">
 
     <div class="fixed inset-0 -z-10 bg-black">
-        <x-image conversion="3x2" id="hero-image" class="absolute inset-0 h-full w-full object-cover" :image="$layout->image" />
+
         @if ($layout->video)
-            <video autoplay loop muted class="absolute inset-0 h-full w-full object-cover"
+            <video autoplay loop muted
+                class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-1000"
+                oncanplaythrough="console.log('ding');this.classList.remove('opacity-0')"
                 src="{{ $layout->video->url }}" />
+        @else
+            <x-image conversion="3x2" id="hero-image" class="absolute inset-0 h-full w-full object-cover"
+                :image="$layout->image" />
         @endif
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
