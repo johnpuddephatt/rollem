@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\Textarea;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 use Laravel\Nova\Fields\URL;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+use Whitecube\NovaFlexibleContent\Flexible;
 
 class Hero extends Layout
 {

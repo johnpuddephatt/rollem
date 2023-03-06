@@ -28,5 +28,6 @@ class MyFlexibleCast extends FlexibleCast
         "production-hero" => \App\Nova\Flexible\Layouts\ProductionHero::class,
         "watch-video" => \App\Nova\Flexible\Layouts\WatchVideo::class,
         "image" => \App\Nova\Flexible\Layouts\Image::class,
+        "sub-productions" => \App\Nova\Flexible\Layouts\SubProductions::class,
     ];
 }

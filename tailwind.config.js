@@ -25,6 +25,7 @@ module.exports = {
             "teal-light": "#276168",
             lilac: "#E7BEFF",
             gray: "#ECEBE7",
+            transparent: "#ffffff00",
         },
         fontFamily: {
             sans: ['"Neue Haas"', ...defaultTheme.fontFamily.sans],

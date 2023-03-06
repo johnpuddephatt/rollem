@@ -4,29 +4,23 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
-use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Image;
-
 use Laravel\Nova\Panel;
 use Laravel\Nova\Fields\Slug;
 use Whitecube\NovaFlexibleContent\Flexible;
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image as InterventionImage;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use App\Nova\Actions\SaveAndResizeImage;
-use Laravel\Nova\Fields\Tag;
-use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
-use Laravel\Nova\Fields\HasMany;
 
-class Production extends Resource
+use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+
+class SubProduction extends Resource
 {
+    public static $displayInNavigation = false;
+
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Production::class;
+    public static $model = \App\Models\SubProduction::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -69,8 +63,6 @@ class Production extends Resource
 
             MediaHubField::make("Image"),
 
-            HasMany::make("Sub-productions", "subProductions"),
-
             Panel::make("Content", [
                 Flexible::make("Content")
                     ->addLayout(
@@ -91,9 +83,6 @@ class Production extends Resource
                     )
                     ->addLayout(\App\Nova\Flexible\Layouts\Image::class)
                     ->addLayout(\App\Nova\Flexible\Layouts\ImagePair::class)
-                    ->addLayout(
-                        \App\Nova\Flexible\Layouts\SubProductions::class
-                    )
                     ->enablePreview(
                         \Illuminate\Support\Facades\Vite::asset(
                             "resources/css/app.css"

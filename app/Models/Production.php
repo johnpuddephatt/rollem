@@ -40,4 +40,9 @@ class Production extends Model
     {
         return route("production.show", ["production" => $this->slug]);
     }
+
+    public function subProductions()
+    {
+        return $this->hasMany(\App\Models\SubProduction::class);
+    }
 }
