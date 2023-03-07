@@ -74,6 +74,8 @@ class Post extends Resource
                         \App\Nova\Flexible\Layouts\TextWithPullout::class
                     )
                     ->addLayout(\App\Nova\Flexible\Layouts\Quote::class)
+                    ->addLayout(\App\Nova\Flexible\Layouts\Image::class)
+                    ->addLayout(\App\Nova\Flexible\Layouts\ImagePair::class)
                     ->addLayout(\App\Nova\Flexible\Layouts\WatchVideo::class)
                     ->enablePreview(
                         \Illuminate\Support\Facades\Vite::asset(
