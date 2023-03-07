@@ -1,14 +1,14 @@
 text-teal
-text-pink
 text-red
 text-gray
+text-lilac
 
 border-teal
-border-pink
 border-red
 border-gray
+border-lilac
 
 bg-teal
-bg-pink
 bg-red
 bg-gray
+bg-lilac
