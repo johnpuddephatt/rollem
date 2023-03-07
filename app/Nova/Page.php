@@ -26,6 +26,8 @@ class Page extends Resource
      */
     public static $model = \App\Models\Page::class;
 
+    public static $clickAction = "edit";
+
     /**
      * The single value that should be used to represent the resource when being displayed.
      *

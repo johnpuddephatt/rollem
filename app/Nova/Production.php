@@ -42,6 +42,8 @@ class Production extends Resource
      */
     public static $search = ["title"];
 
+    public static $clickAction = "edit";
+
     /**
      * Get the fields displayed by the resource.
      *

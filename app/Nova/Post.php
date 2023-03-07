@@ -37,6 +37,8 @@ class Post extends Resource
      */
     public static $search = ["id"];
 
+    public static $clickAction = "edit";
+
     /**
      * Get the fields displayed by the resource.
      *

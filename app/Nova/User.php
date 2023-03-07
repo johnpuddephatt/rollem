@@ -42,6 +42,8 @@ class User extends Resource
      */
     public static $search = ["id", "name", "email"];
 
+    public static $clickAction = "edit";
+
     /**
      * Get the fields displayed by the resource.
      *
