@@ -34,7 +34,7 @@ class ProductionsPageTemplate
     // Resolve data for serialization
     public function resolve($page)
     {
-        $page->productions = \App\Models\Production::latest()->get();
+        $page->productions = \App\Models\Production::all();
         return $page;
     }
 }
