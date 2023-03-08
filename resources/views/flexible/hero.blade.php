@@ -1,7 +1,8 @@
 @php($embed = isset($layout->trailer) ? OEmbed::get($layout->trailer) : null)
 
 <div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative flex h-screen flex-col items-center justify-end text-white">
-
+    <div class="pointer-events-none absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
+    </div>
     <div class="fixed inset-0 -z-10 bg-black">
 
         @if ($layout->video)

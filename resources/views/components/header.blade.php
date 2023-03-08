@@ -1,5 +1,4 @@
-<header id="main-header" x-data="{ menuOpen: false }"
-    class="to-transparent fixed top-0 left-0 z-10 w-full bg-gradient-to-b from-[#000000aa] py-12 text-white">
+<header id="main-header" x-data="{ menuOpen: false }" class="fixed top-0 left-0 z-10 w-full py-12 text-white">
     <div class="container flex flex-row items-start justify-between">
         <a href="/">
             <img class="h-48 w-48 opacity-90 lg:h-56 lg:w-56" src="{{ Storage::disk('local')->url($settings['logo']) }}">
