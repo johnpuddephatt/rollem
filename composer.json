@@ -25,6 +25,7 @@
         "outl1ne/nova-menu-builder": "^7.1",
         "outl1ne/nova-settings": "^5.0",
         "outl1ne/nova-simple-repeatable": "^2.1",
+        "outl1ne/nova-sortable": "^3.4",
         "spatie/laravel-login-link": "^1.1",
         "spatie/laravel-medialibrary": "^10.7",
         "trin4ik/nova-switcher": "^0.3.0",

@@ -18,9 +18,12 @@ use Manogi\Tiptap\Tiptap;
 use App\Nova\Actions\SaveAndResizeImage;
 use Illuminate\Support\Facades\Storage;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+use Outl1ne\NovaSortable\Traits\HasSortableRows;
 
 class User extends Resource
 {
+    use HasSortableRows;
+
     /**
      * The model the resource corresponds to.
      *
@@ -64,7 +67,9 @@ class User extends Resource
                 ->sortable()
                 ->rules("required", "max:255"),
 
-            Slug::make("Slug")->from("Name"),
+            Slug::make("Slug")
+                ->from("Name")
+                ->hideFromIndex(),
 
             Text::make("Email")
                 ->sortable()
