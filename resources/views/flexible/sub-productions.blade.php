@@ -6,9 +6,14 @@
                     <div class="group w-2/3 flex-shrink-0 cursor-pointer pt-6 lg:w-2/5"
                         @click="$el.scrollIntoView(); currentSubProduction = '{{ $subProduction->slug }}'">
                         @if ($subProduction->image)
-                            <x-image ::class="{ '!border-lilac': currentSubProduction == '{{ $subProduction->slug }}' }"
-                                class="block aspect-[3/2] h-auto w-full border-4 border-transparent transition group-hover:border-white"
-                                conversion="3x2" :image="$subProduction->image" />
+                            <div class="relative border-4 border-transparent group-hover:border-white"
+                                ::class="{ '!border-lilac': currentSubProduction == '{{ $subProduction->slug }}' }">
+                                <x-image class="block aspect-[3/2] h-auto w-full transition" conversion="3x2"
+                                    :image="$subProduction->image" />
+                                <div
+                                    class="absolute left-0 right-0 bottom-0 z-10 h-24 bg-gradient-to-t from-black to-transparent">
+                                </div>
+                            </div>
                         @else
                             <div :class="{ '!border-lilac': currentSubProduction == '{{ $subProduction->slug }}' }"
                                 class="block aspect-[3/2] h-auto w-full border-4 border-transparent bg-gray bg-opacity-20 transition group-hover:border-white">
