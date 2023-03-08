@@ -13,9 +13,9 @@
             @endif
 
             @foreach ($layout->reviews as $review)
-                <{{ $review->url ? 'a target="_blank"' : 'div' }} href="{{ $review->url }}"
-                    class="text-center transition" x-transition:enter="opacity-0 absolute top-24 left-0"
-                    x-transition:leave="opacity-0" x-show="activeReview == {{ $loop->index }}">
+                <{{ $review->url ? 'a' : 'div' }} href="{{ $review->url }}" class="text-center transition"
+                    x-transition:enter="opacity-0 absolute top-24 left-0" x-transition:leave="opacity-0"
+                    x-show="activeReview == {{ $loop->index }}">
                     @if ($review->name)
                         <p class="mb-6 font-semibold">{{ $review->name }}</p>
                     @endif
