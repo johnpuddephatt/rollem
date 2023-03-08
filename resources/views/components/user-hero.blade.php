@@ -3,7 +3,7 @@
         <x-image conversion="2x3"
             class="right-0 top-0 z-[20] mb-12 ml-auto h-auto w-3/4 sm:w-1/2 lg:absolute lg:mb-0 lg:w-2/5"
             :image="$user->photo" />
-        <h1 class="lg:wrap-words max-w-6xl text-7xl font-bold !tracking-normal lg:text-8xl">
+        <h1 class="wrap-words max-w-6xl text-7xl font-bold !tracking-normal lg:w-3/5 lg:text-8xl">
             {{ $user->name }}
         </h1>
     </div>
