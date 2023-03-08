@@ -14,8 +14,9 @@ class Post extends Model
     protected static function booted()
     {
         static::addGlobalScope("published_at", function (Builder $builder) {
-            $builder->whereNotNull("published_at");
-            $builder->orderBy("published_at", "desc");
+            $builder
+                ->whereNotNull("published_at")
+                ->orderBy("published_at", "asc");
         });
     }
 
