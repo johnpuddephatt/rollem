@@ -5,7 +5,7 @@
         <h1 class="max-w-6xl text-6xl font-bold !tracking-normal text-lilac lg:text-7xl 2xl:text-8xl">
             {!! nl2br($layout->title) !!}</h1>
         <div>
-            <p class="mt-6 text-3xl font-bold text-white">{{ $post->published_at->format('jS F y') }}</p>
+            <p class="mt-6 text-3xl font-bold text-white">{{ $post->published_at->format('jS F Y') }}</p>
             @if ($post->author)
                 <a href="{{ route('user.show', ['user' => $post->author->slug]) }}"
                     class="mt-6 flex flex-row items-center gap-4">

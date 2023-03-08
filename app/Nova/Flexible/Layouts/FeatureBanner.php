@@ -48,7 +48,7 @@ class FeatureBanner extends Layout
             Text::make("Pre-title", "pretitle"),
             Text::make("Title"),
             Tiptap::make("Description")->buttons(["italic", "bold", "link"]),
-            URL::make("Link"),
+            Text::make("Link"),
             Select::make("Colour")->options([
                 "black" => "Black",
                 "teal" => "Teal",
