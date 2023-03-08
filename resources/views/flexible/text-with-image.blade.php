@@ -4,7 +4,7 @@
             <div class="{{ $layout->reverse ? '' : 'justify-between' }} container flex flex-col gap-24 lg:flex-row">
                 <div class="{{ $layout->reverse ? 'order-last' : '' }} prose max-w-lg">
                     @if ($layout->title)
-                        <h2 class="mt-0 mb-0 text-3xl font-bold">{{ $layout->title }}</h2>
+                        <h2 class="mt-0 mb-0 text-4xl font-bold">{{ $layout->title }}</h2>
                     @endif
                     @if ($layout->subtitle)
                         <h3 class="mt-2 mb-0 text-xl font-bold">{{ $layout->subtitle }}</h3>
@@ -13,7 +13,7 @@
                         {!! $layout->main !!}</div>
                 </div>
 
-                <x-image :image="$layout->image" conversion="portrait"
+                <x-image :image="$layout->image" conversion="square"
                     class="{{ $layout->reverse ? 'order-first' : '' }} -my-16 block max-w-none object-cover lg:-my-64 lg:w-1/2" />
             </div>
         </div>
