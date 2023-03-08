@@ -1,3 +1,4 @@
+@section('image', $production?->image->getUrl('thumbnail'))
 @section('title', $production->title)
 @extends('layouts.default') @section('content')
     @foreach ($production->content as $layout)

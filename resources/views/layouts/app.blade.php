@@ -13,6 +13,8 @@
     <meta name="description" content="@yield('description', config('app.description'))" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="@yield('image', 'fallback')" />
+
     <link rel="canonical" href="@yield('canonical', Request::url())" />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
