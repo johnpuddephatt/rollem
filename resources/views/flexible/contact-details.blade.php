@@ -8,7 +8,7 @@
                 @endif
                 @if (isset($settings['company_phone']))
                     <p><a class="text-xl font-bold !no-underline"
-                            href="tel:{{ $settings['contact_phone'] }}">{{ $settings['company_phone'] }}</a></p>
+                            href="tel:{{ $settings['company_phone'] }}">{{ $settings['company_phone'] }}</a></p>
                 @endif
                 @if (isset($settings['company_address']))
                     <p class="text-xl font-bold">
