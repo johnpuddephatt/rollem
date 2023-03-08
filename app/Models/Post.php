@@ -16,7 +16,7 @@ class Post extends Model
         static::addGlobalScope("published_at", function (Builder $builder) {
             $builder
                 ->whereNotNull("published_at")
-                ->orderBy("published_at", "asc");
+                ->orderBy("published_at", "desc");
         });
     }
 
