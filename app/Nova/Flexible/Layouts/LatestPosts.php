@@ -31,8 +31,7 @@ class LatestPosts extends Layout
     // Define your accessors here
     public function getPostsAttribute()
     {
-        return \App\Models\Post::latest()
-            ->skip($this->__get("skip") ?? 0)
+        return \App\Models\Post::skip($this->__get("skip") ?? 0)
             ->take($this->__get("limit") ?? 9999)
             ->get();
     }
