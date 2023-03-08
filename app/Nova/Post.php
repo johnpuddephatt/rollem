@@ -4,14 +4,14 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Badge;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Panel;
 use Whitecube\NovaFlexibleContent\Flexible;
-use Laravel\Nova\Fields\Image;
-use App\Nova\Actions\SaveAndResizeImage;
-use Illuminate\Support\Facades\Storage;
+use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Http\Requests\NovaRequest;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 
 class Post extends Resource
@@ -39,6 +39,13 @@ class Post extends Resource
 
     public static $clickAction = "edit";
 
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        return $query
+            ->withoutGlobalScopes(["published_at"])
+            ->orderBy("published_at", "desc");
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -51,19 +58,28 @@ class Post extends Resource
             ID::make()
                 ->sortable()
                 ->hideFromIndex(),
-
             MediaHubField::make("Image"),
             Text::make("Title")
                 ->rules("required", "string", "max:50")
                 ->maxlength(50)
                 ->enforceMaxlength(),
-            Slug::make("Slug")->from("Title"),
-
+            Slug::make("Slug")
+                ->from("Title")
+                ->hideFromIndex(),
             Text::make("Introduction")
                 ->rules("required", "string", "max:150")
                 ->hideFromIndex()
                 ->maxlength(150)
                 ->enforceMaxlength(),
+            Date::make("Publish date", "published_at")->help(
+                "Leave the date blank to mark this post as a draft."
+            ),
+            Badge::make("Status", "status", function () {
+                return $this->published_at ? "published" : "draft";
+            })->types([
+                "draft" => ["font-bold", "bg-primary-100", "text-primary-600"],
+                "published" => ["font-bold", "bg-green-100", "text-green-600"],
+            ]),
 
             BelongsTo::make("Author", "author", User::class)->nullable(),
             Panel::make("Content", [
