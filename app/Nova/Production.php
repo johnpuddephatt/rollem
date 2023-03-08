@@ -18,9 +18,12 @@ use App\Nova\Actions\SaveAndResizeImage;
 use Laravel\Nova\Fields\Tag;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 use Laravel\Nova\Fields\HasMany;
+use Outl1ne\NovaSortable\Traits\HasSortableRows;
 
 class Production extends Resource
 {
+    use HasSortableRows;
+
     /**
      * The model the resource corresponds to.
      *
