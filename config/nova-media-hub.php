@@ -62,7 +62,7 @@ return [
     // Thumbnail conversion name
     // If you want Nova to use thumbnails instead of full size files
     // when dispalying media, define the name of the conversion here
-    "thumbnail_conversion_name" => "thumbnail",
+    "thumbnail_conversion_name" => "square",
 
     // Image manipulation driver
     // If null, it will try to read config('image.driver')
@@ -79,12 +79,21 @@ return [
             // Only accepts 'false' as an argument to disable original image manipulations
             // 'original' => false,
 
+            "square" => [
+                // Image format, null for same as original
+                // Other options: jpg, pjpg, png, gif, webp, avif, tiff
+                "format" => "jpg",
+                "width" => 400,
+                "height" => 400,
+                "fit" => Manipulations::FIT_CROP,
+            ],
+
             "thumbnail" => [
                 // Image format, null for same as original
                 // Other options: jpg, pjpg, png, gif, webp, avif, tiff
                 "format" => "jpg",
-                "width" => 250,
-                "height" => 250,
+                "width" => 1200,
+                "height" => 627,
                 "fit" => Manipulations::FIT_CROP,
             ],
             "3x2" => [
