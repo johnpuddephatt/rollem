@@ -2,12 +2,14 @@
     <div class="container text-white">
         <p class="max-w-lg text-sm text-gray">{{ $settings['mission'] }}</p>
 
-        <div class="mt-12 flex flex-row items-center gap-2">
-            <a class="mr-6 text-3xl font-bold"
+        <div class="mt-12 flex flex-col items-center gap-2 lg:flex-row">
+            <a class="mr-6 text-xl font-bold lg:text-3xl"
                 href="mailto:{{ $settings['contact_email'] }}">{{ $settings['company_email'] }}</a>
-            @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
-                <x-social-icon :account="$account" />
-            @endforeach
+            <div class="flex flex-row gap-2">
+                @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
+                    <x-social-icon :account="$account" />
+                @endforeach
+            </div>
         </div>
     </div>
     <img class="absolute -top-8 -right-36 w-[50em] opacity-[0.15]"

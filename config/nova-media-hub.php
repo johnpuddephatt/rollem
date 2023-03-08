@@ -86,6 +86,7 @@ return [
                 "width" => 400,
                 "height" => 400,
                 "fit" => Manipulations::FIT_CROP,
+                "crop" => Manipulations::CROP_TOP,
             ],
 
             "thumbnail" => [
