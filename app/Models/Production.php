@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Casts\MyFlexibleCast;
+use Spatie\EloquentSortable\Sortable;
+use Spatie\EloquentSortable\SortableTrait;
+use Illuminate\Database\Eloquent\Builder;
 
-class Production extends Model
+class Production extends Model implements Sortable
 {
-    use HasFactory;
+    use SortableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -23,6 +26,19 @@ class Production extends Model
         "published_at",
         "image",
     ];
+
+    public $sortable = [
+        "order_column_name" => "sort_order",
+        "sort_when_creating" => true,
+    ];
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::addGlobalScope("order", function (Builder $builder) {
+            $builder->orderBy("sort_order", "asc");
+        });
+    }
 
     /**
      * The attributes that should be cast to native types.
