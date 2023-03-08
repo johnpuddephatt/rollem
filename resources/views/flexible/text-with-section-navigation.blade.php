@@ -6,11 +6,15 @@
         <hr class="mb-4 w-48 max-w-full border-t-2 border-teal-light" />
 
         @php($parent = $layout->sectionNavigation['parent'])
-        <h3 class="mb-4 text-3xl font-bold"><a href="{{ $parent->url }}">{{ $parent->title }}</a></h3>
+        <h3 class="mb-4 text-3xl font-bold"><a
+                class="@if (url($parent->url) == request()->url()) border-lilac @else border-transparent @endif border-b-4"
+                href="{{ $parent->url }}">{{ $parent->title }}</a></h3>
 
         <nav class="space-y-2">
             @foreach ($layout->sectionNavigation['children'] as $child)
-                <p class="text-2xl font-bold"><a href="{{ $child->url }}">{{ $child->title }}</a></p>
+                <p class="text-2xl font-bold"><a
+                        class="@if (url($child->url) == request()->url()) border-lilac @else border-transparent @endif border-b-4"
+                        href="{{ url($child->url) }}">{{ $child->title }}</a></p>
             @endforeach
         </nav>
 

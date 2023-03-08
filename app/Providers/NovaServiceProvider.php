@@ -36,7 +36,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     Textarea::make("Mission"),
                 ]),
                 Panel::make("Contact details", [
-                    Text::make("Email address", "contact_email"),
+                    Text::make("Email address", "company_email"),
+                    Text::make("Phone number", "company_phone"),
+                    Text::make("Address", "company_address"),
+                    Text::make("Company legal details", "company_legal"),
                 ]),
                 Panel::make("Social media", [
                     URL::make("Facebook"),

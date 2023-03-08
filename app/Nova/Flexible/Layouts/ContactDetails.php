@@ -2,22 +2,23 @@
 namespace App\Nova\Flexible\Layouts;
 
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
+use Manogi\Tiptap\Tiptap;
 
-class SubProductions extends Layout
+class ContactDetails extends Layout
 {
     /**
      * The layout's unique identifier
      *
      * @var string
      */
-    protected $name = "sub-productions";
+    protected $name = "contact-details";
 
     /**
      * The displayed title
      *
      * @var string
      */
-    protected $title = "Sub-productions";
+    protected $title = "Contact details";
 
     /**
      * Enable preview for this layout
@@ -25,11 +26,6 @@ class SubProductions extends Layout
      * @var string
      */
     protected $preview = true;
-
-    public function getSubProductionsAttribute()
-    {
-        return $this->model->subProductions()->get();
-    }
 
     /**
      * Get the fields displayed by the layout.

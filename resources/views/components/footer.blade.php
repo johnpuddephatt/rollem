@@ -4,7 +4,7 @@
 
         <div class="mt-12 flex flex-row items-center gap-2">
             <a class="mr-6 text-3xl font-bold"
-                href="mailto:{{ $settings['contact_email'] }}">{{ $settings['contact_email'] }}</a>
+                href="mailto:{{ $settings['contact_email'] }}">{{ $settings['company_email'] }}</a>
             @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
                 <x-social-icon :account="$account" />
             @endforeach

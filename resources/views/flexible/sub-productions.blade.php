@@ -36,9 +36,12 @@
                 </div>
             </div>
 
-            @foreach ($subProduction->content as $layout)
-                @include('flexible.' . $layout->name(), ['layout' => $layout])
-            @endforeach
+            @if (is_object($subProduction->content))
+                @foreach ($subProduction->content as $layout)
+                    @include('flexible.' . $layout->name(), ['layout' => $layout])
+                @endforeach
+            @endif
+
         </div>
     @endforeach
 

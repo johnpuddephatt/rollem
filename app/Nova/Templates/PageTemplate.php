@@ -50,6 +50,9 @@ class PageTemplate
                     ->addLayout(\App\Nova\Flexible\Layouts\Quote::class)
                     ->addLayout(\App\Nova\Flexible\Layouts\Team::class)
                     ->addLayout(\App\Nova\Flexible\Layouts\WatchVideo::class)
+                    ->addLayout(
+                        \App\Nova\Flexible\Layouts\ContactDetails::class
+                    )
                     ->enablePreview(
                         \Illuminate\Support\Facades\Vite::asset(
                             "resources/css/app.css"

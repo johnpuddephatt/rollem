@@ -30,5 +30,6 @@ class MyFlexibleCast extends FlexibleCast
         "image" => \App\Nova\Flexible\Layouts\Image::class,
         "image-pair" => \App\Nova\Flexible\Layouts\ImagePair::class,
         "sub-productions" => \App\Nova\Flexible\Layouts\SubProductions::class,
+        "contact-details" => \App\Nova\Flexible\Layouts\ContactDetails::class,
     ];
 }
