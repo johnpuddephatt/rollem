@@ -1,4 +1,4 @@
-<{{ $layout->link ? 'a' : 'div' }} class="relative my-16 bg-white md:grid md:grid-cols-2" href="{{ $layout->link }}">
+<{{ $layout->link ? 'a' : 'div' }} class="relative bg-white py-16 md:grid md:grid-cols-2" href="{{ $layout->link }}">
     @if ($layout->image)
         <x-image conversion="3x2" class="block w-full lg:my-16" :image="$layout->image" />
         <div class="bg-{{ $layout->colour ?? 'teal' }} absolute top-0 right-1/2 hidden h-16 w-16 lg:block"></div>
