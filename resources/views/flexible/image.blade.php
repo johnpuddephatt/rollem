@@ -1,5 +1,5 @@
 <div
-    class="{{ $layout->lift ? '-mb-32' : null }} bg-white{{ $layout->background_colour ? 'pt-24' : 'pt-12 ' }} relative lg:pb-24 lg:pt-24">
+    class="{{ $layout->lift ? '-mb-32' : null }} bg-white{{ $layout->background_colour ? 'pb-24' : '' }} relative py-12">
     @if ($layout->background_colour)
         <div class="bg-{{ $layout->background_colour }} absolute bottom-0 left-0 h-48 w-full"></div>
     @endif
