@@ -1,5 +1,5 @@
 @if ($layout->posts->count())
-    <div class="bg-white pb-8 pt-0 lg:pb-24 lg:pt-0">
+    <div class="bg-white pb-8 pt-8 lg:pb-24 lg:pt-0">
         <div class="max-md:container">
             <x-post-card class="block md:grid md:grid-cols-2" :wide="true" :post="$layout->posts->first()" />
             <div class="lg:container">
