@@ -21,7 +21,7 @@ body {
 }
 
 .prose\:emphasise-first > *:first-child {
-    @apply text-lg font-semibold;
+    @apply text-xl font-semibold;
 }
 
 .last-child\:text-black > *:last-child {

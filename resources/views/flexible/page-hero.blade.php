@@ -3,7 +3,7 @@
 
     @if ($layout->image)
         <div
-            class="pointer-events-none absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
+            class="pointer-events-none absolute top-0 left-0 right-0 z-10 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
         </div>
         <x-image id="hero-image" conversion="3x2" :image="$layout->image" class="fixed inset-0 h-full w-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
