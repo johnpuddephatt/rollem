@@ -36,7 +36,7 @@ class Text extends Layout
     {
         return [
             Tiptap::make("Content")
-                ->buttons(["heading", "|", "bold", "italic", "|", "blockquote"])
+                ->buttons(["heading", "bold", "italic", "link", "blockquote"])
                 ->headingLevels([2, 3])
                 ->withMeta([
                     "extraAttributes" => [
