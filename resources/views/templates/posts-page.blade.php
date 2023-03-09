@@ -4,9 +4,11 @@
 @extends('layouts.default') @section('content')
     @include('components.posts-hero')
 
-    <div class="bg-white py-16 lg:py-36">
+    <div class="relative border-t-[4rem] border-black pb-16 lg:pb-36">
+
         @foreach ($page->content as $layout)
             @include('flexible.' . $layout->name(), ['layout' => $layout])
         @endforeach
+
     </div>
 @endsection
