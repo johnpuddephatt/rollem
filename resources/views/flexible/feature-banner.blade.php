@@ -1,7 +1,7 @@
 <{{ $layout->link ? 'a' : 'div' }} class="relative bg-white py-16 md:grid md:grid-cols-2" href="{{ $layout->link }}">
     @if ($layout->image)
         <x-image conversion="3x2" class="block w-full lg:my-16" :image="$layout->image" />
-        <div class="bg-{{ $layout->colour ?? 'teal' }} absolute top-0 right-1/2 hidden h-16 w-16 lg:block"></div>
+        <div class="bg-{{ $layout->colour ?? 'teal' }} absolute top-16 right-1/2 hidden h-16 w-16 lg:block"></div>
     @endif
     <div
         class="bg-{{ $layout->colour ?? 'teal' }} {{ $layout->reverse ? 'order-first' : null }} lg:gpy-24 relative z-10 flex flex-col justify-center p-6 py-12 text-white max-md:ml-8 max-md:-mt-8 lg:p-12">
