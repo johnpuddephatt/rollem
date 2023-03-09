@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Traits\RedirectsToIndexOnSave;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Badge;
@@ -38,6 +39,7 @@ class Post extends Resource
     public static $search = ["id"];
 
     public static $clickAction = "edit";
+    use RedirectsToIndexOnSave;
 
     public static function indexQuery(NovaRequest $request, $query)
     {

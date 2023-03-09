@@ -16,6 +16,7 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use Manogi\Tiptap\Tiptap;
 use App\Nova\Actions\SaveAndResizeImage;
+use App\Nova\Traits\RedirectsToIndexOnSave;
 use Illuminate\Support\Facades\Storage;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 use Outl1ne\NovaSortable\Traits\HasSortableRows;
@@ -46,6 +47,7 @@ class User extends Resource
     public static $search = ["id", "name", "email"];
 
     public static $clickAction = "edit";
+    use RedirectsToIndexOnSave;
 
     /**
      * Get the fields displayed by the resource.

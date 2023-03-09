@@ -50,9 +50,7 @@ class TextWithImage extends Layout
             Text::make("Title"),
             Text::make("Subtitle"),
 
-            Textarea::make("Badge")
-                ->help("Text wrapped in **asterisks** will appear black")
-                ->rows(2),
+            Textarea::make("Badge")->rows(2),
 
             Tiptap::make("Main")
                 ->buttons(["bold", "italic", "link", "blockquote"])

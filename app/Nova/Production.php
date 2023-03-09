@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image as InterventionImage;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Nova\Actions\SaveAndResizeImage;
+use App\Nova\Traits\RedirectsToIndexOnSave;
 use Laravel\Nova\Fields\Tag;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
 use Laravel\Nova\Fields\HasMany;
@@ -46,6 +47,7 @@ class Production extends Resource
     public static $search = ["title"];
 
     public static $clickAction = "edit";
+    use RedirectsToIndexOnSave;
 
     /**
      * Get the fields displayed by the resource.

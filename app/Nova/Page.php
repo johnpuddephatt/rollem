@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Storage;
 use Laravel\Nova\Fields\Image;
 use App\Nova\Actions\SaveAndResizeImage;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+use App\Nova\Traits\RedirectsToIndexOnSave;
 
 class Page extends Resource
 {
+    use RedirectsToIndexOnSave;
     /**
      * The model the resource corresponds to.
      *

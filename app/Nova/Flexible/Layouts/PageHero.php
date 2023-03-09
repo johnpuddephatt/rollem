@@ -3,8 +3,10 @@
 namespace App\Nova\Flexible\Layouts;
 
 use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\URL;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+use Whitecube\NovaFlexibleContent\Flexible;
 
 class PageHero extends Layout
 {
@@ -40,6 +42,15 @@ class PageHero extends Layout
      */
     public function fields()
     {
-        return [Textarea::make("Title")->rows(2), MediaHubField::make("Image")];
+        return [
+            Textarea::make("Title")->rows(2),
+            MediaHubField::make("Image"),
+            Flexible::make("Content")->addLayout("Foo", "foo", [
+                Textarea::make("Title")
+                    ->rows(2)
+                    ->stacked(),
+                MediaHubField::make("Image")->stacked(),
+            ]),
+        ];
     }
 }

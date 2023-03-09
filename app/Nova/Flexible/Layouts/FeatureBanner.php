@@ -5,9 +5,11 @@ namespace App\Nova\Flexible\Layouts;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\URL;
 use Manogi\Tiptap\Tiptap;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+use Trin4ik\NovaSwitcher\NovaSwitcher;
 
 class FeatureBanner extends Layout
 {
@@ -44,6 +46,8 @@ class FeatureBanner extends Layout
     public function fields()
     {
         return [
+            NovaSwitcher::make("Reverse"),
+
             MediaHubField::make("Image"),
             Text::make("Pre-title", "pretitle"),
             Text::make("Title"),
@@ -53,6 +57,7 @@ class FeatureBanner extends Layout
                 "black" => "Black",
                 "teal" => "Teal",
             ]),
+            Textarea::make("Badge")->rows(2),
         ];
     }
 }
