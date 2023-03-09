@@ -80,23 +80,25 @@ class Image extends Component
             $str .= "{$url} {$width}w,";
         }
 
-        $str .=
-            "data:image/svg+xml;base64," .
-            base64_encode(
-                Blade::render(
-                    '
+        if ($str) {
+            $str .=
+                "data:image/svg+xml;base64," .
+                base64_encode(
+                    Blade::render(
+                        '
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0"
                         y="0" viewBox="0 0 {{ $width }} {{ $height }}">
                     </svg>
                 ',
-                    [
-                        "width" => $configs[$this->conversion]["width"],
-                        "height" => $configs[$this->conversion]["height"],
-                    ]
-                )
-            ) .
-            " 32w";
+                        [
+                            "width" => $configs[$this->conversion]["width"],
+                            "height" => $configs[$this->conversion]["height"],
+                        ]
+                    )
+                ) .
+                " 32w";
+        }
 
         // $str = rtrim($str, ",");
 
