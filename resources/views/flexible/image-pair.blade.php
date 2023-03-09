@@ -1,4 +1,4 @@
-<div class="relative py-24">
+<div class="{{ $layout->lift ? '-mb-32' : null }} relative py-24">
     @if ($layout->background_colour)
         <div class="bg-{{ $layout->background_colour }} absolute bottom-0 left-0 -z-10 h-48 w-full"></div>
     @endif

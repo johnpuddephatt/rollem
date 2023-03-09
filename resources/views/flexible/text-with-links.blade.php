@@ -1,5 +1,5 @@
 <div class="bg-white">
-    <div class="container gap-x-24 py-24 md:grid md:grid-cols-2 lg:py-36 xl:grid-cols-3">
+    <div class="container gap-x-24 py-12 md:grid md:grid-cols-2 lg:py-36 xl:grid-cols-3">
         <div class="xl:col-span-2">
             <div class="prose:emphasise-first prose max-w-lg">
                 {!! $layout->description !!}

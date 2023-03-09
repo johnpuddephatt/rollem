@@ -21,7 +21,7 @@
                     @endif
                     @if ($review->review)
                         <blockquote class="mb-12">
-                            <p class="relative text-3xl font-semibold italic lg:text-4xl">“{{ $review->review }}”</p>
+                            <p class="relative text-2xl font-semibold italic lg:text-4xl">“{{ $review->review }}”</p>
                         </blockquote>
                     @endif
                     <div class="mb-12 flex flex-row items-center justify-center gap-2">

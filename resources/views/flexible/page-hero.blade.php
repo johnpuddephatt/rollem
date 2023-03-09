@@ -9,7 +9,7 @@
         <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
     @endif
     <div id="hero-text" class="container relative z-10 mb-12 max-w-3xl text-center opacity-90">
-        <h1 class="{{ $text_color ?? 'text-white' }} mb-8 text-6xl font-bold !tracking-normal lg:text-8xl">
+        <h1 class="{{ $text_color ?? 'text-white' }} mb-8 text-5xl font-bold !tracking-normal lg:text-8xl">
             {{ $layout->title }}</h1>
     </div>
 </div>

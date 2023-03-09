@@ -4,6 +4,7 @@ namespace App\Nova\Flexible\Layouts;
 
 use Laravel\Nova\Fields\Select;
 use Outl1ne\NovaMediaHub\Nova\Fields\MediaHubField;
+use Trin4ik\NovaSwitcher\NovaSwitcher;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 
 class ImagePair extends Layout
@@ -51,6 +52,7 @@ class ImagePair extends Layout
                 "red" => "Red",
                 "gray" => "Grey",
             ]),
+            NovaSwitcher::make("Lift?"),
         ];
     }
 }

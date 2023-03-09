@@ -1,11 +1,12 @@
-<div class="relative flex h-[70vh] flex-col justify-end bg-black pb-12 text-white lg:h-[80vh]">
+<div class="relative flex min-h-[80vh] flex-col justify-end bg-black pb-12 text-white lg:min-h-[85vh]">
     <div class="pointer-events-none absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
     </div>
     <div id="hero-text" class="container">
-        <h1 class="max-w-6xl text-6xl font-bold !tracking-normal text-lilac lg:text-7xl 2xl:text-8xl">
+        <h1 class="max-w-5xl text-5xl font-bold !tracking-normal text-lilac lg:text-7xl 2xl:text-8xl">
             {!! nl2br($layout->title) !!}</h1>
         <div>
-            <p class="mt-6 text-3xl font-bold text-white">{{ $post->published_at->format('jS F Y') }}</p>
+            <p class="mt-4 text-xl font-bold text-white lg:mt-6 lg:text-3xl">{{ $post->published_at->format('jS F Y') }}
+            </p>
             @if ($post->author)
                 <a href="{{ route('user.show', ['user' => $post->author->slug]) }}"
                     class="mt-6 flex flex-row items-center gap-4">

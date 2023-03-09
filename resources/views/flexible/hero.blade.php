@@ -17,8 +17,8 @@
     <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
 
     <div id="hero-text" class="relative z-10 mb-12 text-center opacity-90">
-        <h1 class="mb-8 text-7xl font-bold">{!! nl2br($layout->title) !!}</h1>
-        <p class="mx-auto mb-16 max-w-2xl text-xl font-semibold">{!! nl2br($layout->subtitle) !!}</p>
+        <h1 class="mb-8 text-5xl font-bold lg:text-7xl">{!! nl2br($layout->title) !!}</h1>
+        <p class="mx-auto mb-16 max-w-2xl text-xs font-semibold lg:text-xl">{!! nl2br($layout->subtitle) !!}</p>
 
         @if ($embed)
             <button x-on:click="trailerLoaded = true; trailerOpen = true;" class="mx-auto w-20"
