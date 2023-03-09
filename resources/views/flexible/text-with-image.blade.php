@@ -1,8 +1,8 @@
-    <div class="relative py-24">
+    <div class="y-24 relative">
 
         <div class="left-0 top-32 -z-10 min-h-[65%] w-full py-8 lg:py-36">
             <div
-                class="{{ $layout->reverse ? '' : 'justify-between' }} container flex flex-col items-center gap-24 lg:flex-row">
+                class="{{ $layout->reverse ? '' : 'justify-between' }} container flex flex-col gap-24 lg:flex-row lg:items-center">
                 <div class="{{ $layout->reverse ? 'order-last' : '' }} prose max-w-lg">
                     @if ($layout->title)
                         <h2 class="mt-0 mb-0 text-4xl font-bold lg:text-6xl">{{ $layout->title }}</h2>
@@ -15,7 +15,7 @@
                 </div>
 
                 <x-image :image="$layout->image" conversion="square"
-                    class="{{ $layout->reverse ? 'order-first' : '' }} block max-w-none object-cover lg:w-1/2" />
+                    class="{{ $layout->reverse ? 'order-first' : '' }} block w-full max-w-none object-cover lg:w-1/2" />
             </div>
         </div>
 
