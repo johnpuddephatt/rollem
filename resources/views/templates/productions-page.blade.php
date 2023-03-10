@@ -3,7 +3,7 @@
 @section('title', $page->title)
 @extends('layouts.default') @section('content')
 
-    @include('flexible.page-hero', ['layout' => $page, 'text_color' => 'text-lilac'])
+    @include('flexible.page-hero', ['layout' => $page])
 
     <div class="bg-white">
         <div class="container space-y-12 py-16 lg:py-36">

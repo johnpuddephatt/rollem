@@ -51,3 +51,7 @@ body {
 .prose h3 {
     @apply text-3xl font-bold;
 }
+
+article div:first-child .prose p:first-child {
+    @apply text-xl font-semibold;
+}
