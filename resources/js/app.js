@@ -15,7 +15,7 @@ function fadeOnScroll() {
     if (document.getElementById("hero-image")) {
         document.getElementById("hero-image").style.opacity = Math.max(
             0,
-            1 - window.scrollY / window.innerHeight / 2
+            1 - (window.scrollY * 1.2) / window.innerHeight
         );
     }
 
