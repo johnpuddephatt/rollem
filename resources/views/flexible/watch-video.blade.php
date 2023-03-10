@@ -9,7 +9,7 @@
                 @svg('play', 'h-16 w-16 lg:h-24 lg:w-24')
                 <div>
                     @if ($layout->pretitle)
-                        <p class="mb-2 text-xl font-semibold text-white lg:mb-4 lg:text-2xl">{{ $layout->pretitle }}</p>
+                        <p class="text-xl font-semibold text-white lg:mb-4 lg:text-2xl">{{ $layout->pretitle }}</p>
                     @endif
                     <h2 class="text-2xl font-bold leading-tight text-white antialiased lg:text-5xl">{{ $layout->title }}
                     </h2>
