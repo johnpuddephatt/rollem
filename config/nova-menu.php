@@ -45,7 +45,7 @@ return [
         "header" => [
             "name" => "Header",
             "unique" => true,
-            "max_depth" => 1,
+            "max_depth" => 2,
             "menu_item_types" => [],
         ],
     ],
@@ -61,6 +61,7 @@ return [
 
     "menu_item_types" => [
         \App\Nova\Menu\MenuItemPageType::class,
+        \App\Nova\Menu\MenuItemProductionType::class,
         \Outl1ne\MenuBuilder\MenuItemTypes\MenuItemTextType::class,
         \Outl1ne\MenuBuilder\MenuItemTypes\MenuItemStaticURLType::class,
     ],

@@ -9,6 +9,11 @@
             <div class="text-3xl font-bold lg:text-5xl">{{ $user->role }}</div>
             <div class="prose mt-8 lg:mt-16">
                 {!! $user->biography !!}
+
+                @if ($user->email)
+                    <a class="border-b-2 border-red text-2xl font-bold underline !no-underline"
+                        href="mailto:{{ $user->email }}">{{ $user->email }}</a>
+                @endif
             </div>
         </div>
     </div>

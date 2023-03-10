@@ -9,6 +9,13 @@ class ProductionController extends Controller
 {
     public static function show(Production $production)
     {
-        return view("production.show", compact("production"));
+        $related_productions = \App\Models\Production::inRandomOrder()
+            ->where("id", "!=", $production->id)
+            ->take(2)
+            ->get();
+        return view(
+            "production.show",
+            compact("production", "related_productions")
+        );
     }
 }

@@ -7,4 +7,14 @@
             @include('flexible.' . $layout->name(), ['layout' => $layout])
         @endforeach
     </article>
+
+    <div class="container mt-16">
+        <h2 class="mb-12 text-4xl font-bold">More of our latest news</h3>
+            <div class="my-16 grid gap-16 bg-white lg:grid-cols-3">
+
+                @foreach ($related_posts as $related_post)
+                    <x-post-card :post="$related_post" />
+                @endforeach
+            </div>
+    </div>
 @endsection
