@@ -27,12 +27,12 @@
                     <div class="mb-12 flex flex-row items-center justify-center gap-6">
                         @if ($review->rating)
                             @foreach (range(0, $review->rating) as $rating)
-                                @svg('star', 'w-6 h-6 lg:w-10 lg:h-10 max-w-[8rem]')
+                                @svg('star', 'w-6 h-6 lg:w-10 lg:h-10')
                             @endforeach
                         @endif
                         @if ($review->publication)
                             <cite class="text-xl font-bold not-italic">
-                                <x-publication-logo class="h-8 w-auto lg:h-10" :publication="$review->publication" />
+                                <x-publication-logo class="h-8 w-auto max-w-[8rem] lg:h-10" :publication="$review->publication" />
                             </cite>
                         @endif
                     </div>
