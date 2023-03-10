@@ -18,10 +18,9 @@
                     @if (count($menu_item['children']))
                         <div
                             class="ml-4 hidden pt-2 lg:pointer-events-none lg:absolute lg:top-full lg:z-40 lg:ml-0 lg:block lg:translate-y-2 lg:opacity-0 lg:transition lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
-                            <div
-                                class="lg:min-w-[12em] lg:divide-y lg:divide-[#ccccccaa] lg:overflow-hidden lg:rounded">
+                            <div class="lg:min-w-[12em] lg:divide-y lg:divide-[#0001] lg:overflow-hidden lg:rounded">
                                 @foreach ($menu_item['children'] as $child_item)
-                                    <a class="block truncate px-6 py-2 text-sm text-white backdrop-blur-lg transition lg:bg-white lg:bg-opacity-30 lg:text-black lg:hover:bg-opacity-100"
+                                    <a class="block truncate px-6 py-2 text-sm text-white backdrop-blur-xl transition lg:bg-white lg:bg-opacity-40 lg:text-black lg:hover:bg-opacity-100"
                                         href="{{ $child_item['value'] }}">
                                         {{ $child_item['name'] }}
                                     </a>
