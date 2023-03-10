@@ -1,4 +1,4 @@
-    <div class="@if ($layout->badge) pt-24 @endif relative py-12 lg:py-24">
+    <div class="@if ($layout->badge) pt-28 @endif relative py-12 lg:py-24">
 
         <div class="left-0 top-32 -z-10 min-h-[65%] w-full py-8 lg:py-36">
             <div
@@ -21,7 +21,7 @@
 
         @if ($layout->badge)
             <div
-                class="absolute right-1 top-0 flex h-36 w-36 flex-col justify-center overflow-hidden rounded-full bg-red py-4 pr-0 text-lg font-bold leading-tight lg:top-24 lg:left-1/2 lg:h-64 lg:w-64 lg:-translate-x-1/2 lg:py-16 lg:px-8 lg:pr-0 lg:text-3xl">
+                class="absolute right-1 -top-6 flex h-36 w-36 flex-col justify-center overflow-hidden rounded-full bg-red p-4 pr-0 text-lg font-bold leading-tight lg:top-24 lg:left-1/2 lg:h-64 lg:w-64 lg:-translate-x-1/2 lg:py-16 lg:px-8 lg:pr-0 lg:text-3xl">
                 <div class="border-b-2 border-white pb-1 pr-4 text-white lg:pr-16">
                     {!! Str::markdown($layout->badge) !!}
                 </div>
