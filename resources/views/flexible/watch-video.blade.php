@@ -20,7 +20,7 @@
             </div>
             @if ($layout->badge)
                 <div
-                    class="{{ $layout->colour == 'red' ? 'bg-red' : 'bg-white' }} absolute right-2 top-2 flex h-32 w-32 flex-col justify-center overflow-hidden rounded-full p-6 pr-0 text-lg font-bold leading-tight shadow-xl lg:top-8 lg:right-16 lg:h-64 lg:w-64 lg:p-16 lg:pr-8 lg:text-3xl">
+                    class="{{ $layout->colour == 'red' ? 'bg-red' : 'bg-white' }} absolute right-2 top-2 flex h-24 w-24 flex-col justify-center overflow-hidden rounded-full p-4 pr-0 font-bold leading-tight shadow-xl lg:top-8 lg:right-16 lg:h-64 lg:w-64 lg:p-16 lg:pr-8 lg:text-3xl">
                     <div
                         class="text-{{ $layout->colour }} {{ $layout->colour == 'red' ? 'border-white text-white' : 'last-child:text-black border-' . $layout->colour }} border-b-2 pb-1 pr-4 lg:pr-8">
                         {!! Str::markdown($layout->badge) !!}
