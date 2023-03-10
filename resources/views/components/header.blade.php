@@ -1,7 +1,7 @@
 <header id="main-header" x-data="{ menuOpen: false }" class="fixed top-0 left-0 z-20 w-full py-12 text-white">
     <div class="container flex flex-row items-start justify-between">
         <a href="/">
-            <img class="h-44 w-44 opacity-90 lg:h-56 lg:w-56" src="{{ Storage::disk('local')->url($settings['logo']) }}">
+            <img class="h-36 w-36 opacity-90 lg:h-56 lg:w-56" src="{{ Storage::disk('local')->url($settings['logo']) }}">
         </a>
 
         <button @click="menuOpen = !menuOpen" class="relative z-50 text-lg font-bold lg:hidden">Menu</button>
