@@ -16,7 +16,7 @@
                 @endif
 
                 @if (isset($settings['company_legal']))
-                    <p class="mt-8">{{ $settings['company_legal'] }}</p>
+                    <p class="mt-8 max-w-xl">{{ $settings['company_legal'] }}</p>
                 @endif
             </div>
         </div>
