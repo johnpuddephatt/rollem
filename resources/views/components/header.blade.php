@@ -7,7 +7,7 @@
         <button @click="menuOpen = !menuOpen" class="relative z-50 text-lg font-bold lg:hidden">Menu</button>
 
         <nav :class="!menuOpen && 'max-lg:translate-x-full'"
-            class="inset-0 z-40 flex flex-col items-start gap-2 text-lg font-semibold transition max-lg:absolute max-lg:h-screen max-lg:justify-center max-lg:bg-black max-lg:p-8 lg:flex-row">
+            class="inset-0 z-40 flex flex-col items-start gap-2 text-lg font-semibold transition max-lg:fixed max-lg:h-screen max-lg:justify-center max-lg:bg-black max-lg:p-8 lg:flex-row">
             @foreach ($primary_menu as $menu_item)
                 <div class="group relative">
                     <a class="inline-block rounded py-2 px-6 transition group-hover:bg-white group-hover:bg-opacity-10"
