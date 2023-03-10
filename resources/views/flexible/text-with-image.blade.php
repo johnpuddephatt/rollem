@@ -1,6 +1,6 @@
     <div class="@if ($layout->badge) pt-28 @endif relative py-12 lg:py-24">
 
-        <div class="left-0 top-32 -z-10 min-h-[65%] w-full py-8 lg:py-36">
+        <div class="left-0 top-32 -z-10 min-h-[65%] w-full py-8">
             <div
                 class="{{ $layout->reverse ? '' : 'justify-between' }} container flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-24">
                 <div class="{{ $layout->reverse ? 'order-last' : '' }} prose max-w-lg">
