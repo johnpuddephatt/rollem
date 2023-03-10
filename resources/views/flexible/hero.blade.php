@@ -8,8 +8,7 @@
         @if ($layout->video)
             <video autoplay loop muted id="hero-image"
                 class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-1000"
-                oncanplaythrough="console.log('ding');this.classList.remove('opacity-0')"
-                src="{{ $layout->video->url }}" />
+                oncanplaythrough="this.classList.remove('opacity-0')" src="{{ $layout->video->url }}" />
         @else
             <x-image conversion="3x2"class="absolute inset-0 h-full w-full object-cover" :image="$layout->image" />
         @endif
