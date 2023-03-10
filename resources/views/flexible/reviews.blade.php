@@ -24,15 +24,15 @@
                             <p class="relative text-2xl font-semibold italic lg:text-4xl">“{{ $review->review }}”</p>
                         </blockquote>
                     @endif
-                    <div class="mb-12 flex flex-row items-center justify-center gap-2">
+                    <div class="mb-12 flex flex-row items-center justify-center gap-6">
                         @if ($review->rating)
                             @foreach (range(0, $review->rating) as $rating)
-                                @svg('star', 'w-6 h-6 lg:w-10 lg:h-10')
+                                @svg('star', 'w-6 h-6 lg:w-10 lg:h-10 max-w-[8rem]')
                             @endforeach
                         @endif
                         @if ($review->publication)
-                            <cite class="ml-6 text-xl font-bold not-italic">
-                                <x-publication-logo class="h-8 w-full" :publication="$review->publication" />
+                            <cite class="text-xl font-bold not-italic">
+                                <x-publication-logo class="h-8 w-auto lg:h-10" :publication="$review->publication" />
                             </cite>
                         @endif
                     </div>
