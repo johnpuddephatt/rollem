@@ -52,6 +52,6 @@ body {
     @apply text-3xl font-bold;
 }
 
-article div:first-child .prose p:first-child {
+article > div:first-child .prose p:first-child {
     @apply text-xl font-semibold;
 }
