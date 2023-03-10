@@ -5,7 +5,7 @@
                 {!! $layout->main !!}
             </div>
         </div>
-        @if (!!$layout->sidebar)
+        @if ($layout->sidebar !== '<p></p>')
             <div class="{{ $layout->reverse ? 'order-first' : 'order-first lg:order-none' }} py-8 lg:py-16">
 
                 <div
