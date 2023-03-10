@@ -32,7 +32,8 @@
                         @endif
                         @if ($review->publication)
                             <cite class="text-xl font-bold not-italic">
-                                <x-publication-logo class="h-8 w-auto max-w-[12rem] lg:h-10" :publication="$review->publication" />
+                                <x-publication-logo class="h-8 w-auto max-w-[12rem] lg:h-10 lg:max-w-[16rem]"
+                                    :publication="$review->publication" />
                             </cite>
                         @endif
                     </div>
