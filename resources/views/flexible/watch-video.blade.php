@@ -6,7 +6,7 @@
 
             <div
                 class="{{ $layout->colour == 'red' ? 'right-0' : 'right-64' }} absolute bottom-0 left-0 flex w-full flex-row items-end gap-2 bg-gradient-to-t from-[#000000aa] to-transparent px-4 pt-24 pb-4 lg:gap-4 lg:gap-8 lg:px-12 lg:pb-8">
-                @svg('play', 'h-16 w-16 lg:h-24 lg:w-24')
+                @svg('play', 'h-12 w-12 lg:h-24 lg:w-24')
                 <div>
                     @if ($layout->pretitle)
                         <p class="text-xl font-semibold text-white lg:mb-4 lg:text-2xl">{{ $layout->pretitle }}</p>
