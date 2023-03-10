@@ -2,8 +2,8 @@
     <div class="container text-white">
         <p class="mx-auto max-w-lg text-sm text-gray lg:mx-0">{{ $settings['mission'] }}</p>
 
-        <div class="mt-12 flex flex-col items-center gap-2 lg:flex-row">
-            <a class="mr-6 text-xl font-bold lg:text-3xl"
+        <div class="mt-12 flex flex-col items-center gap-4 lg:flex-row lg:gap-6">
+            <a class="text-xl font-bold lg:text-3xl"
                 href="mailto:{{ $settings['contact_email'] }}">{{ $settings['company_email'] }}</a>
             <div class="flex flex-row gap-2">
                 @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
