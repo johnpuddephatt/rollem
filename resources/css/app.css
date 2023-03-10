@@ -55,3 +55,7 @@ body {
 article > div:first-child .prose p:first-child {
     @apply text-xl font-semibold;
 }
+
+.prose.prose-compact p {
+    @apply my-2;
+}
