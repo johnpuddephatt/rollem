@@ -16,7 +16,8 @@
     <meta property="og:image" content="@yield('image', 'fallback')" />
 
     <link rel="canonical" href="@yield('canonical', Request::url())" />
-
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src='//unpkg.com/alpinejs' defer></script>
     @stack('head')
