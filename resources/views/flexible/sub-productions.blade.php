@@ -7,7 +7,7 @@
                         @click="$el.scrollIntoView(); currentSubProduction = '{{ $subProduction->slug }}'">
                         @if ($subProduction->image)
                             <div class="relative border-4 border-transparent group-hover:border-white"
-                                ::class="{ '!border-lilac': currentSubProduction == '{{ $subProduction->slug }}' }">
+                                :class="{ '!border-lilac': currentSubProduction == '{{ $subProduction->slug }}' }">
                                 <x-image class="block aspect-[3/2] h-auto w-full transition" conversion="3x2"
                                     :image="$subProduction->image" />
                                 <div

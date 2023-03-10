@@ -1,6 +1,6 @@
 <div class="relative flex min-h-[80vh] flex-col justify-end bg-black pb-12 text-white lg:min-h-[85vh]">
     <div
-        class="pointer-events-none fixed top-0 left-0 right-0 z-10 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
+        class="pointer-events-none absolute top-0 left-0 right-0 z-10 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
     </div>
     <div id="hero-text" class="container">
         <h1 class="max-w-5xl text-5xl font-bold !tracking-normal text-lilac lg:text-7xl 2xl:text-8xl">
