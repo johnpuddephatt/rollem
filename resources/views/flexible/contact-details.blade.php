@@ -1,6 +1,6 @@
-<div class="bg-white py-16">
+<div class="bg-white py-12 lg:py-16">
     <div class="container grid-cols-3 lg:grid">
-        <div class="col-span-2 py-16">
+        <div class="col-span-2 lg:py-16">
             <div class="prose">
                 @if (isset($settings['company_email']))
                     <p><a class="text-xl font-bold !no-underline"
@@ -20,7 +20,7 @@
                 @endif
             </div>
         </div>
-        <div class="py-16">
+        <div class="pt-12 lg:py-16">
             <div class="prose max-w-xl text-xl !font-bold lg:max-w-xs">
 
                 @foreach (['facebook', 'twitter', 'youtube', 'instagram', 'linkedin', 'vimeo'] as $account)
