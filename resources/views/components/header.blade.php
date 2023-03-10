@@ -20,7 +20,7 @@
                             class="ml-4 hidden pt-2 lg:pointer-events-none lg:absolute lg:top-full lg:z-40 lg:ml-0 lg:block lg:translate-y-2 lg:opacity-0 lg:transition lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                             <div class="lg:min-w-[12em] lg:divide-y lg:divide-gray lg:overflow-hidden lg:rounded">
                                 @foreach ($menu_item['children'] as $child_item)
-                                    <a class="block truncate px-6 py-1.5 text-sm text-white transition lg:bg-white lg:bg-opacity-90 lg:text-black lg:hover:bg-gray"
+                                    <a class="block truncate px-6 py-2 text-sm text-white transition lg:bg-white lg:bg-opacity-90 lg:text-black lg:hover:bg-gray"
                                         href="{{ $child_item['value'] }}">
                                         {{ $child_item['name'] }}
                                     </a>
