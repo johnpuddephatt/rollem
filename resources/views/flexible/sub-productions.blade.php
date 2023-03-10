@@ -36,7 +36,7 @@
 
                     </div>
                     <div
-                        class="relative pt-16 before:absolute before:left-0 before:top-0 before:bottom-0 before:-z-10 before:block before:w-[99999px] before:bg-gray lg:px-8">
+                        class="relative hidden pt-16 before:absolute before:left-0 before:top-0 before:bottom-0 before:-z-10 before:block before:w-[99999px] before:bg-gray lg:block lg:px-8">
                     </div>
                 </div>
             </div>
