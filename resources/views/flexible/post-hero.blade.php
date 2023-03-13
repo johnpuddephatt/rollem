@@ -1,4 +1,4 @@
-<div class="relative flex min-h-[80vh] flex-col justify-end bg-black pb-12 text-white lg:min-h-[85vh]">
+<div class="relative flex min-h-[80vh] flex-col justify-end bg-black pt-64 pb-12 text-white lg:min-h-[85vh]">
     <div
         class="pointer-events-none absolute top-0 left-0 right-0 z-10 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
     </div>
