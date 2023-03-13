@@ -1,5 +1,5 @@
 @props(['production'])
-<a href="{{ $production->url }}" {{ $attributes->class(['block mb-12 md:mb-0']) }}>
+<a href="{{ $production->url }}" {{ $attributes->class(['block mb-12 last:mb-0 md:mb-0']) }}>
     <x-image conversion="3x2" :image="$production->image" class="relative block h-auto w-full" />
     <div class="flex max-w-xs flex-grow flex-col">
         <h3 class="mt-8 mb-4 text-2xl font-bold">{{ $production->title }}</h3>
