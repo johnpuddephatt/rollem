@@ -1,5 +1,5 @@
-<div class="grid bg-white py-8 lg:grid-cols-3 lg:py-16">
-    <div class="prose:emphasise-first container prose gap-8 lg:col-span-2 lg:gap-0">
+<div class="grid gap-8 bg-white py-8 lg:grid-cols-3 lg:py-16">
+    <div class="prose:emphasise-first container prose lg:col-span-2 lg:gap-0">
         {!! $layout->main !!}
     </div>
     <div class="container order-first lg:order-none xl:pl-0">
