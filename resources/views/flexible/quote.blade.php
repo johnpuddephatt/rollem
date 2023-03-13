@@ -3,7 +3,7 @@
     <div class="container">
 
         <p
-            class="text-{{ $layout->quote_colour ?? 'white' }} quote-indent max-w-7xl text-5xl font-bold italic lg:text-8xl 2xl:-indent-10">
+            class="text-{{ $layout->quote_colour ?? 'white' }} quote-indent max-w-7xl text-4xl font-bold italic lg:text-7xl xl:text-8xl 2xl:-indent-10">
             “ <span class="text-{{ $layout->text_colour ?? 'lilac' }}">{{ $layout->quote }}</span>&nbsp;”
         </p>
         @if ($layout->source)
