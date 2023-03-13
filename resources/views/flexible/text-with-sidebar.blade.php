@@ -1,5 +1,5 @@
 <div class="relative overflow-hidden">
-    <div class="grid gap-8 lg:container lg:grid-cols-3 lg:gap-0">
+    <div class="lg:container lg:grid lg:grid-cols-3 lg:gap-0">
         <div class="py-8 max-lg:container lg:col-span-2 lg:py-16">
             <div class="prose:emphasise-first {{ $layout->reverse ? 'ml-auto' : '' }} prose">
                 {!! $layout->main !!}
