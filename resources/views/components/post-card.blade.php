@@ -1,5 +1,5 @@
 @props(['post', 'wide' => false])
-<a href="{{ $post->url }}" {{ $attributes->class(['block mb-12 md:mb-0']) }}>
+<a href="{{ $post->url }}" {{ $attributes->class(['block mb-12 last:mb-0 md:mb-0']) }}>
     <x-image conversion="3x2" :image="$post->image" class="{{ $wide ? 'lg:-mt-8' : null }} relative block h-auto w-full" />
     <div class="{{ $wide ? 'md:p-8 xl:p-12  justify-center max-w-lg' : 'max-w-xs flex-grow' }} flex flex-col">
         <h3 class="{{ $wide ? 'md:text-4xl lg:mt-0 ' : '' }} mt-8 mb-4 text-2xl font-bold">{{ $post->title }}</h3>
