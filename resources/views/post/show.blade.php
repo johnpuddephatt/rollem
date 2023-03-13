@@ -8,9 +8,9 @@
         @endforeach
     </article>
 
-    <div class="container mt-16">
+    <div class="container mt-8 lg:mt-16">
         <h2 class="mb-12 text-4xl font-bold">More of our latest news</h2>
-        <div class="my-16 grid gap-16 bg-white lg:grid-cols-3">
+        <div class="my-8 grid gap-8 bg-white lg:my-16 lg:grid-cols-3 lg:gap-16">
             @foreach ($related_posts as $related_post)
                 <x-post-card :post="$related_post" />
             @endforeach
