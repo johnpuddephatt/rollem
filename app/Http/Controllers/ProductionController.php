@@ -11,7 +11,7 @@ class ProductionController extends Controller
     {
         $related_productions = \App\Models\Production::inRandomOrder()
             ->where("id", "!=", $production->id)
-            ->take(2)
+            ->take(3)
             ->get();
         return view(
             "production.show",

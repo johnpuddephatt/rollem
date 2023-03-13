@@ -1,8 +1,8 @@
-<div class="grid-cols-3 bg-white lg:grid">
-    <div class="prose:emphasise-first container prose col-span-2 py-16">
+<div class="grid bg-white py-8 lg:grid-cols-3 lg:py-16">
+    <div class="prose:emphasise-first container prose gap-8 lg:col-span-2 lg:gap-0">
         {!! $layout->main !!}
     </div>
-    <div class="container py-16 xl:pl-0">
+    <div class="container order-first lg:order-none xl:pl-0">
         <hr class="mb-4 w-48 max-w-full border-t-2 border-teal-light" />
 
         @php($parent = $layout->sectionNavigation['parent'])
