@@ -11,7 +11,7 @@
                 {!! $user->biography !!}
 
                 @if ($user->email)
-                    <a class="border-b-2 border-red text-2xl font-bold underline !no-underline"
+                    <a class="border-b-2 border-red text-2xl font-bold !no-underline"
                         href="mailto:{{ $user->email }}">{{ $user->email }}</a>
                 @endif
             </div>

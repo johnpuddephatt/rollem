@@ -4,4 +4,8 @@
     @foreach ($page->content as $layout)
         @include('flexible.' . $layout->name(), ['layout' => $layout])
     @endforeach
+
+    @if ($page->parent || $page->children)
+        @include('components.page-navigation')
+    @endif
 @endsection
