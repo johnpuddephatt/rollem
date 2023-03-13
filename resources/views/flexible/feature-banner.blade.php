@@ -17,7 +17,7 @@
 
     @if ($layout->badge)
         <div
-            class="absolute right-1 -top-8 z-20 flex h-36 w-36 flex-col justify-center overflow-hidden rounded-full bg-lilac p-4 pr-0 text-lg font-bold leading-tight lg:-top-12 lg:left-1/2 lg:h-64 lg:w-64 lg:-translate-x-1/2 lg:p-16 lg:pr-0 lg:text-3xl">
+            class="absolute right-1 -top-8 z-20 flex h-36 w-36 flex-col justify-center overflow-hidden rounded-full bg-lilac p-4 pr-0 text-lg font-bold leading-tight lg:-top-6 lg:left-1/2 lg:h-64 lg:w-64 lg:-translate-x-1/2 lg:p-16 lg:pr-0 lg:text-3xl">
             <div class="border-b-2 border-white pb-1 pr-4 text-black lg:pr-16">
                 {!! Str::markdown($layout->badge) !!}
             </div>
