@@ -31,7 +31,7 @@
 
             <div class="relative overflow-hidden">
                 <div class="grid-cols-3 lg:container lg:grid">
-                    <div class="col-span-2 pt-8 max-lg:container lg:pt-16">
+                    <div class="col-span-2 pt-12 max-lg:container lg:pt-16">
                         <h2 class="text-4xl font-bold lg:text-6xl">{{ $subProduction->title }}</h2>
 
                     </div>
