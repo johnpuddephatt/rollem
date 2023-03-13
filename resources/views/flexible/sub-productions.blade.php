@@ -1,6 +1,6 @@
 <div x-cloak x-data="{ currentSubProduction: '{{ $layout->subProductions->first()->slug }}' }">
     <div class="bg-black py-24 text-white">
-        <h2 class="container text-right text-3xl font-bold lg:text-5xl">Series list</h3>
+        <h2 class="container text-right text-4xl font-bold lg:text-5xl">Series list</h3>
             <div class="container flex flex-row gap-8 overflow-x-auto scroll-smooth scrollbar-hide">
                 @foreach ($layout->subProductions as $subProduction)
                     <div class="group w-2/3 flex-shrink-0 cursor-pointer pt-6 lg:w-2/5"
@@ -31,8 +31,8 @@
 
             <div class="relative overflow-hidden">
                 <div class="grid-cols-3 lg:container lg:grid">
-                    <div class="col-span-2 pt-16 max-lg:container">
-                        <h2 class="mt-16 text-6xl font-bold">{{ $subProduction->title }}</h2>
+                    <div class="col-span-2 pt-8 max-lg:container lg:pt-16">
+                        <h2 class="text-4xl font-bold lg:text-6xl">{{ $subProduction->title }}</h2>
 
                     </div>
                     <div
