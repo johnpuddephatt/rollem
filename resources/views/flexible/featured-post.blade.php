@@ -1,5 +1,5 @@
 @if ($layout->post)
-    <a href="{{ $layout->post->url }}" class="relative bg-white pt-16 lg:grid lg:grid-cols-2">
+    <a href="{{ $layout->post->url }}" class="relative bg-white pt-8 lg:grid lg:grid-cols-2 lg:pt-16">
         @if ($layout->post->image)
             <x-image conversion="3x2" class="block w-full lg:mt-16" :image="$layout->post->image" />
             <div class="absolute top-16 right-1/2 hidden h-16 w-16 bg-teal lg:block"></div>
