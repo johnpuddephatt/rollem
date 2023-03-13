@@ -6,7 +6,7 @@
     @include('flexible.page-hero', ['layout' => $page])
 
     <div class="bg-white">
-        <div class="container space-y-12 py-16 lg:py-36">
+        <div class="container space-y-12 py-12 lg:py-36">
             @if ($page->productions)
                 @foreach ($page->productions as $production)
                     @include('components.production-card', ['flip' => !($loop->iteration % 2)])

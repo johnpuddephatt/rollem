@@ -1,5 +1,5 @@
 <a href="{{ $production->url }}" class="relative md:grid md:grid-cols-2">
-    <x-image conversion="3x2" class="mt-16 w-full" :image="$production->image" />
+    <x-image conversion="3x2" class="w-full lg:mt-16" :image="$production->image" />
     <div
         class="@if ($flip) bg-black left-1/2 @else bg-teal right-1/2 @endif absolute top-0 hidden h-16 w-16 md:block">
     </div>
