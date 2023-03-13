@@ -11,7 +11,7 @@
     <div class="container mt-12 lg:mt-16">
         <div class="mb-12 flex flex-col items-end justify-between lg:flex-row">
             <h2 class="text-3xl font-bold lg:text-4xl">More of our latest news</h2>
-            <a class="text-2xl font-bold text-teal" href="{{ App\Models\Page::getTemplateUrl('posts-page') }}">see all
+            <a class="text-2xl font-bold text-teal" href="{{ \App\Models\Page::getTemplateUrl('posts-page') }}">see all
                 news</a>
         </div>
         <div class="my-8 grid gap-8 bg-white lg:my-16 lg:grid-cols-3 lg:gap-16">
