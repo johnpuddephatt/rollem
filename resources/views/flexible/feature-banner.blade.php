@@ -1,5 +1,5 @@
 <{{ $layout->link ? 'a' : 'div' }}
-    class="{{ $layout->badge ? 'lg:pt-24' : null }} relative block bg-white py-8 md:grid md:grid-cols-2 lg:py-16"
+    class="{{ $layout->badge ? 'lg:pt-28' : null }} relative block bg-white py-8 md:grid md:grid-cols-2 lg:py-16"
     href="{{ $layout->link }}">
     @if ($layout->image)
         <x-image conversion="3x2" class="block w-full lg:mt-16" :image="$layout->image" />
