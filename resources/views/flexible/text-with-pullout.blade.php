@@ -5,7 +5,7 @@
                 {!! $layout->main !!}
             </div>
         </div>
-        @if ($layout->sidebar !== '<p></p>')
+        @if ($layout->sidebar && $layout->sidebar !== '<p></p>')
             <div class="{{ $layout->reverse ? 'order-first' : 'order-first lg:order-none' }}">
 
                 <div class="{{ $layout->reverse ? '' : 'lg:ml-auto' }} prose text-xl font-bold italic lg:max-w-sm">
