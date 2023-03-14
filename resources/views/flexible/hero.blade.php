@@ -6,7 +6,7 @@
     <div class="fixed inset-0 -z-10 bg-black">
 
         @if ($layout->video)
-            <video autoplay loop muted id="hero-image"
+            <video autoplay playsinline loop muted id="hero-image"
                 class="absolute inset-0 h-full w-full object-cover opacity-0 transition duration-1000"
                 oncanplaythrough="this.classList.remove('opacity-0')" src="{{ $layout->video->url }}" />
         @else
