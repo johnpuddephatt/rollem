@@ -8751,12 +8751,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpuddephatt/nova-flexible-content.git",
-                "reference": "97a232265bcda4531b6cb20c0aebe7b17dd67e9d"
+                "reference": "33cd4dc3005adc1c2186da4f3ce075a0b40a89fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpuddephatt/nova-flexible-content/zipball/97a232265bcda4531b6cb20c0aebe7b17dd67e9d",
-                "reference": "97a232265bcda4531b6cb20c0aebe7b17dd67e9d",
+                "url": "https://api.github.com/repos/johnpuddephatt/nova-flexible-content/zipball/33cd4dc3005adc1c2186da4f3ce075a0b40a89fc",
+                "reference": "33cd4dc3005adc1c2186da4f3ce075a0b40a89fc",
                 "shasum": ""
             },
             "require": {
@@ -8824,7 +8824,7 @@
                     "url": "https://github.com/whitecube"
                 }
             ],
-            "time": "2023-03-01T23:03:52+00:00"
+            "time": "2023-03-13T23:08:07+00:00"
         }
     ],
     "packages-dev": [
