@@ -27,17 +27,17 @@ class AppServiceProvider extends ServiceProvider
         View::composer("*", function ($view) {
             $view->with(
                 "settings",
-                // \Cache::rememberForever("settings", function () {
-                nova_get_settings()
-                // })
+                \Cache::rememberForever("settings", function () {
+                    return nova_get_settings();
+                })
             );
             $view->with(
                 "primary_menu",
-                // \Cache::rememberForever("primaryMenu", function () {
-                nova_get_menu_by_slug("header")
-                    ? nova_get_menu_by_slug("header")["menuItems"]
-                    : []
-                // })
+                \Cache::rememberForever("primaryMenu", function () {
+                    return nova_get_menu_by_slug("header")
+                        ? nova_get_menu_by_slug("header")["menuItems"]
+                        : [];
+                })
             );
         });
 
