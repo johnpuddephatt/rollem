@@ -103,6 +103,7 @@ class Post extends Resource
                         )
                     )
                     ->stacked()
+                    ->defaultLayouts(["text"])
                     ->button("Add content"),
             ]),
         ];

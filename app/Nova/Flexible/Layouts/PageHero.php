@@ -42,15 +42,6 @@ class PageHero extends Layout
      */
     public function fields()
     {
-        return [
-            Textarea::make("Title")->rows(2),
-            MediaHubField::make("Image"),
-            Flexible::make("Content")->addLayout("Foo", "foo", [
-                Textarea::make("Title")
-                    ->rows(2)
-                    ->stacked(),
-                MediaHubField::make("Image")->stacked(),
-            ]),
-        ];
+        return [Textarea::make("Title")->rows(2), MediaHubField::make("Image")];
     }
 }
