@@ -3,7 +3,7 @@
 <div x-data="{ trailerOpen: false, trailerLoaded: false }" class="relative flex h-screen flex-col items-center justify-end text-white">
     <div class="pointer-events-none absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#000000aa] to-transparent">
     </div>
-    <div class="fixed inset-0 top-36 -z-10 bg-black">
+    <div class="fixed inset-0 -z-10 bg-black">
 
         @if ($layout->video)
             <video autoplay playsinline loop muted id="hero-image"
@@ -13,7 +13,7 @@
             <x-image conversion="3x2"class="absolute inset-0 h-full w-full object-cover" :image="$layout->image" />
         @endif
     </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black"></div>
+    <div class="absolute inset-0 top-36 bg-gradient-to-t from-black"></div>
 
     <div id="hero-text" class="relative z-10 mb-12 text-center opacity-90">
         <h1 class="mb-8 text-5xl font-bold lg:text-7xl">{!! nl2br($layout->title) !!}</h1>
