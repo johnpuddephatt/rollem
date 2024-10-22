@@ -59,7 +59,7 @@ class MenuItemProductionType extends MenuItemSelectType
     public static function getDisplayValue($value, ?array $data, $locale)
     {
         // Example usecase
-        return "Production: " . \App\Models\Production::find($value)->title;
+        return "Production: " . \App\Models\Production::find($value)?->title;
         // return $value;
     }
 
