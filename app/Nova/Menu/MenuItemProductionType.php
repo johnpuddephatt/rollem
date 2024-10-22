@@ -92,7 +92,7 @@ class MenuItemProductionType extends MenuItemSelectType
      */
     public static function getValue($value, ?array $data, $locale)
     {
-        return \App\Models\Production::find($value)->URL;
+        return \App\Models\Production::find($value)?->URL;
     }
 
     /**
